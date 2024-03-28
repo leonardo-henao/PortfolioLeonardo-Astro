@@ -1,0 +1,18 @@
+---
+import { motion } from 'framer-motion';
+
+interface Props {
+  title: string;
+  font_normal?: boolean;
+}
+
+const { title, font_normal = false } = Astro.props;
+---
+
+<motion.div
+  client:only
+  initial={{ translateX: -70 }}
+  whileInView={{ translateX: 0 }}
+  className={`title_section ${!font_normal ? 'righteous' : ''}`}
+  ml-2>{title}</motion.div
+>

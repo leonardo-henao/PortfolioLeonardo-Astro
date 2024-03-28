@@ -1,0 +1,32 @@
+---
+import TitleSection from '../../title-section.astro';
+import { AllWebProjects, AllAndroidProjects } from '../../../data/Projects';
+import { register } from 'swiper/element/bundle';
+
+register();
+
+import CardPortfolioProject from '../../card-portfolio-project.astro';
+---
+
+<article>
+  <TitleSection title="Portafolio" />
+  <div class="mx-auto">
+    <h3 class="opacity-40 text-lg my-4 mx-auto pl-4 max-w-7xl">
+      <TitleSection title="Sitios y Aplicaciones WEB" font_normal={true} />
+    </h3>
+    <div class="flex flex-col gap-4 overflow-hidden">
+      <div class="flex flex-row overflow-x-scroll no-scrollbar">
+        {AllWebProjects.map((x) => <CardPortfolioProject project={x} />)}
+      </div>
+    </div>
+
+    <h3 class="opacity-40 text-lg mt-8 mb-4 mx-auto pl-4 max-w-7xl">
+      <TitleSection title="Aplicaciones Android" font_normal={true} />
+    </h3>
+    <div class="flex flex-col gap-4 overflow-hidden">
+      <div class="flex flex-row overflow-x-scroll no-scrollbar">
+        {AllAndroidProjects.map((x) => <CardPortfolioProject project={x} />)}
+      </div>
+    </div>
+  </div>
+</article>

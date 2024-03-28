@@ -1,0 +1,40 @@
+---
+import './index.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Portafolio Leonardo Henao</title>
+
+    <link rel="icon" type="image/*" href="/icon.svg" />
+    <meta name="theme-color" content="#17181d" />
+
+    <meta
+      name="description"
+      content="Desarrollador de software con experiencia en lenguajes como C#, Python, JavaScript, Kotlin, HTML, CSS y más. Especializado en el desarrollo de aplicaciones web y móviles utilizando frameworks como Django y .NET. Apasionado por la resolución de problemas y la creación de soluciones innovadoras."
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      is:inline
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C7YN8M7EE6"></script>
+    <script is:inline type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-C7YN8M7EE6');
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

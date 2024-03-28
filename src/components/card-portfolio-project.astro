@@ -1,0 +1,182 @@
+---
+import { IPortfolioProject } from '../interfaces/IPortfolioProject';
+
+interface Props {
+  project: IPortfolioProject;
+}
+
+const { project } = Astro.props;
+const { name, image, imageBackground, description, toolsUsed, link } = project;
+---
+
+<div class="portfolio_item">
+  <img
+    loading="lazy"
+    class="portfolio_item-background"
+    src={imageBackground}
+    alt={`Imagen de fondo de decoración para la aplicación ${name}`}
+  />
+
+  <div class="portfolio_item-content">
+    <span class="portfolio_item-content-title">{name}</span>
+
+    <div class="flex flex-nowrap flex-row justify-center items-center">
+      <figure>
+        <img loading="lazy" src={image} alt=`Imagen de la aplicación de ${name }` />
+      </figure>
+      <div class="portfolio_item-content-data no-scrollbar">
+        <p class="text-gray-300 m-4">{description}</p>
+      </div>
+    </div>
+    <ul class="portfolio_item-content-data-skills">
+      {toolsUsed.map((x) => <li>{x}</li>)}
+    </ul>
+    <a class="portfolio_item-content-button" href="{{ project?.link }}" target="_blank"> Visitar </a>
+  </div>
+</div>
+<style>
+  .portfolio_item {
+    position: relative;
+    margin: 5px;
+    width: 400px;
+  }
+
+  .portfolio_item-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: blur(15px);
+  }
+
+  .portfolio_item-content {
+    position: relative;
+    z-index: 10;
+    min-height: 100%;
+
+    padding: 0.1rem;
+    border-radius: 10px;
+
+    align-items: center;
+  }
+
+  .portfolio_item-content::after {
+    content: '';
+
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--cl-black-02);
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+
+  .portfolio_item-content-title {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .portfolio_item-content figure {
+    width: 35%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .portfolio_item-content figure img {
+    border-radius: 10px;
+  }
+
+  .portfolio_item-content-data {
+    width: 62%;
+    height: 240px;
+    overflow-y: scroll;
+    padding: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .portfolio_item-content-data-skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.8rem auto;
+    justify-content: center;
+    align-items: center;
+    height: 4.8rem;
+    gap: 0.2rem;
+    width: 80%;
+  }
+
+  .portfolio_item-content-data-skills li {
+    display: flex;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    background-color: var(--cl-black);
+    color: var(--cl-green1);
+    font-size: 0.8rem;
+  }
+
+  .portfolio_item-content-button {
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+    width: fit-content;
+    margin: 0 0 0 auto;
+    padding: 10px 15px;
+    z-index: 5;
+
+    letter-spacing: 0.2rem;
+    color: white;
+    background-color: var(--cl-black);
+    border-radius: 4px;
+  }
+
+  .portfolio_item-content-button::after {
+    content: '';
+
+    position: absolute;
+    border-radius: 4px;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+
+    background-color: var(--cl-green1);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .portfolio_item-content-button:hover::after {
+    width: 100%;
+    box-shadow: 0px 0px 8px var(--cl-green1);
+  }
+
+  @media (min-width: 640px) {
+    .portfolio_item {
+      width: 500px;
+    }
+
+    .portfolio_item-content {
+      padding: 1.5rem;
+    }
+
+    .portfolio_item-content figure {
+      width: 45%;
+    }
+
+    .portfolio_item-content-data {
+      width: 50%;
+    }
+  }
+</style>

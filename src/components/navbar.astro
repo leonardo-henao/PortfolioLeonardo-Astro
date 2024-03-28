@@ -1,0 +1,48 @@
+---
+import { CgMenuRightAlt } from 'react-icons/cg';
+import { MdClose } from 'react-icons/md';
+---
+
+<nav class="w-full flex justify-between items-center kanit sticky top-0 bg-[#0b0b0e] z-40 text-white">
+  <div class="text-3xl p-4">
+    <a href="/">Leonardo H.</a>
+  </div>
+  <div onclick="controlMenu()" class="w-12 h-12 p-2 cursor-pointer md:hidden ml-auto text-3xl">
+    <CgMenuRightAlt />
+  </div>
+  <div>
+    <ul class="md:gap-4 md:p-4 hidden md:flex max-md:menu_mobile" id="menu">
+      <li class="li_nav" onclick="controlMenu()">
+        <a href="#" onclick="goToTop()">Inicio</a>
+      </li>
+      <li class="li_nav" onclick="controlMenu()">
+        <a href="#about_me">Sobre mi</a>
+      </li>
+      <li class="li_nav" onclick="controlMenu()">
+        <a href="#services">Servicios</a>
+      </li>
+      <li class="li_nav" onclick="controlMenu()">
+        <a href="#portfolio">Portafolio</a>
+      </li>
+      <li class="cursor-pointer mt-8 text-2xl md:hidden" onclick="controlMenu()">
+        <MdClose />
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script is:inline>
+  const controlMenu = () => {
+    const menuElement = document.getElementById('menu');
+    const classList = menuElement.classList;
+
+    if (classList.contains('hidden')) {
+      classList.remove('hidden');
+      classList.add('flex');
+    } else classList.add('hidden');
+  };
+
+  const goToTop = () => {
+    if (isPlatformBrowser(this.platformId)) window.scroll(0, 0);
+  };
+</script>

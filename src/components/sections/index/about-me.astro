@@ -1,0 +1,68 @@
+---
+import TitleSection from '../../title-section.astro';
+---
+
+<article>
+  <TitleSection title="Sobre mi" />
+  <div class="content-aboutme">
+    <div class="grid grid-cols-1 sm:grid-cols-5 items-center justify-center">
+      <div class="m-auto w-full sm:block sm:col-span-2">
+        <img class="img_photo" loading="lazy" src="/assets/photo__.jpg" alt="Foto de Leonardo H" />
+      </div>
+      <div class="sm:col-span-3 p-2">
+        <p>
+          Con más de 5 años de experiencia destacada en la creación y optimización de aplicaciones y páginas
+          web, me enfoco en proporcionar soluciones innovadoras a empresas que buscan potenciar su presencia
+          digital. Mi especialización se centra en el
+          <span class="important">desarrollo de front-end</span> con enfoque principal en <span
+            class="important">React</span
+          >, así como en la implementación efectiva de <span class="important">Python</span> para optimizar procesos.
+        </p>
+        <p>
+          Durante mi trayectoria, he demostrado habilidades sobresalientes en la creación de
+          <span class="important">aplicaciones Android</span> utilizando Kotlin. Además, poseo un conocimiento
+          profundo de tecnologías web clave, como
+          <span class="important">HTML, CSS, JavaScript, Typescript</span> y he trabajado con marcos de trabajo
+          líderes como
+          <span class="important">Angular, Astro, React y Tailwind CSS</span>. Mi experiencia también abarca
+          el uso de
+          <span class="important">.NET</span> y
+          <span class="important">Django</span>.
+        </p>
+        <p class="">
+          En el ámbito de bases de datos, tengo experiencia práctica con sistemas como <span class="important"
+            >MySQL y MongoDB</span
+          >. Mi enfoque se complementa con una sólida comprensión de patrones de diseño, incluyendo MVC y
+          Atomic Design, así como patrones de arquitectura como DDD. Mi método de trabajo se alinea con
+          prácticas ágiles como Scrum, y cuento con habilidades avanzadas en el control de versiones a través
+          de
+          <span class="important">Git y GitHub.</span>
+        </p>
+      </div>
+    </div>
+    <div class="p-8 text-lg">
+      Estoy convencido de que mi experiencia y enfoque especializado pueden aportar significativamente al
+      éxito y la innovación de su empresa. Estoy emocionado por la oportunidad de discutir cómo mis
+      habilidades pueden complementar sus objetivos empresariales y contribuir al crecimiento sostenible de su
+      organización.
+    </div>
+  </div>
+</article>
+
+<style>
+  p {
+    margin: 1rem 0;
+    padding: 4px;
+  }
+
+  .content-aboutme {
+    background-color: var(--cl-black-02);
+    border-radius: 1rem;
+  }
+
+  .content-aboutme .img_photo {
+    border-radius: 1rem 0 0 1rem;
+    max-width: 350px;
+    margin: 0.5rem auto;
+  }
+</style>

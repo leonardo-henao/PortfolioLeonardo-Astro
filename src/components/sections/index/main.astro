@@ -1,0 +1,46 @@
+---
+import ContactMe from '../../contact-me.astro';
+import TextTyped from '../../TextTyped';
+---
+
+<section id="home" class="flex flex-col justify-center items-center h-screen mx-auto relative w-full">
+  <video autoplay loop muted class="absolute top-0 left-0 bottom-0 object-cover w-full h-full">
+    <source src="/videos/vid-01.mp4" type="video/mp4" />
+    <source src="/videos/vid-01.webm" type="video/webm" />
+  </video>
+  <div class="section_welcome"></div>
+  <div class="z-20 -mt-8 flex flex-col items-center">
+    <h1 class="kanit text-5xl md:text-7xl mb-2 text-center flex flex-wrap gap-4 justify-center">
+      Desarrollador <TextTyped client:visible />
+    </h1>
+    <h2 class="text-base md:text-lg w-3/5 text-center opacity-80">
+      ¡Hola! Soy Leonardo Henao, un desarrollador de software apasionado por la tecnología, la informática, la
+      programación, el color negro, el trabajo en equipo y por querer aportar de la manera más efectiva
+      posible en cada proyecto en el que participo.
+    </h2>
+    <div class="my-2">
+      <ContactMe />
+    </div>
+  </div>
+</section>
+
+<style>
+  .section_welcome::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 2;
+    background: linear-gradient(to bottom, var(--cl-black), transparent, var(--cl-black));
+  }
+
+  video {
+    z-index: 1;
+    opacity: 0.5;
+  }
+</style>

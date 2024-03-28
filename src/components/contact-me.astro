@@ -1,0 +1,71 @@
+---
+import { ContactLinks } from '../interfaces/ContactLinks';
+
+const links: ContactLinks[] = [
+  {
+    link: 'http://wa.me/573165051130',
+    icon: '/icons/whatsapp.svg',
+    alt: 'icono de whatsapp',
+    iconSmall: false,
+  },
+  {
+    link: 'mailto:leonardofhenao.085@gmail.com',
+    icon: '/icons/gmail.svg',
+    alt: 'icono de gmail',
+    iconSmall: false,
+  },
+  {
+    link: 'https://github.com/leonardo-henao',
+    icon: '/icons/github.svg',
+    alt: 'icono de github',
+    iconSmall: true,
+  },
+  {
+    link: 'https://play.google.com/store/apps/dev?id=7404460400144886326&hl=es-419',
+    icon: '/icons/google-play.svg',
+    alt: 'icono de google play store',
+    iconSmall: true,
+  },
+  {
+    link: 'https://www.linkedin.com/in/leonardo-henao/',
+    icon: '/icons/linkedin.svg',
+    alt: 'icono de linkedin',
+    iconSmall: false,
+  },
+];
+---
+
+<ul>
+  {
+    links.map((x) => (
+      <li>
+        <a href={x.link} target="_blank" rel="noopener noreferrer">
+          <img
+            src={x.icon}
+            alt={x.alt}
+            class={`${x.iconSmall ? 'icon-small' : ''} opacity-70 hover:opacity-100 transition-all"`}
+          />
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  ul {
+    display: flex;
+  }
+
+  ul li {
+    padding: 0.2rem;
+    margin: 0.2rem;
+  }
+
+  ul li img {
+    width: 1.6rem;
+  }
+
+  ul li .icon-small {
+    width: 1.4rem;
+  }
+</style>
