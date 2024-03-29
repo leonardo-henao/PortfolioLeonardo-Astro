@@ -5,7 +5,7 @@
 
 @layer components {
     .li_nav {
-        @apply border-b-2 border-transparent hover:border-primary transition-all rounded-sm max-md:text-3xl
+        @apply border-b-2 border-transparent hover:border-primary rounded-sm max-md:text-3xl
     }
 
     .menu_mobile {
@@ -73,12 +73,11 @@ html {
     scroll-behavior: smooth;
     padding: 0px;
     margin: 0px;
-    /* overflow-x: hidden; */
 }
 
 article {
     margin: 3rem auto 0 auto;
-    max-width: 1600px;
+    max-width: 1200px;
     padding-inline: .5rem;
 }
 

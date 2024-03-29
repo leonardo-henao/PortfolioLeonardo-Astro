@@ -1,9 +1,10 @@
 ---
+import { motion } from 'framer-motion';
 import { MyServices } from '../../../data/Services';
 import TitleSection from '../../title-section.astro';
 ---
 
-<article>
+<article id="services">
   <TitleSection title="Servicios" />
   <div class="services-container grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-4">
     {
@@ -11,7 +12,15 @@ import TitleSection from '../../title-section.astro';
         <div>
           <img class="icon_service" src={x.icon} alt={x.alt} />
           <h2 class="title_service">{x.title}</h2>
-          <p class="opacity-80">{x.description}</p>
+          <motion.p
+            client:visible
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="opacity-70"
+          >
+            {x.description}
+          </motion.p>
         </div>
       ))
     }

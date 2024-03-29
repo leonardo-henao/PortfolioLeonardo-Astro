@@ -1,0 +1,26 @@
+---
+import { IPortfolioProject } from '../interfaces/IPortfolioProject';
+import CardPortfolioProject from './card-portfolio-project.astro';
+
+interface Props {
+  projects: IPortfolioProject[];
+}
+
+const { projects } = Astro.props;
+
+import { SwiperOptions } from 'swiper/types';
+const opts: SwiperOptions = {
+  centeredSlides: true,
+  speed: 1000,
+  effect: 'coverflow',
+  loop: true,
+  navigation: true,
+  pagination: true,
+  lazyPreloadPrevNext: 1,
+  keyboard: true,
+};
+---
+
+<swiper-container {...opts}>
+  {projects.map((x) => <CardPortfolioProject project={x} />)}
+</swiper-container>

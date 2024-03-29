@@ -1,22 +1,30 @@
 ---
+import { motion } from 'framer-motion';
 import TitleSection from '../../title-section.astro';
 ---
 
-<article>
+<article id="about_me">
   <TitleSection title="Sobre mi" />
   <div class="content-aboutme">
     <div class="grid grid-cols-1 sm:grid-cols-5 items-center justify-center">
-      <div class="m-auto w-full sm:block sm:col-span-2">
+      <motion.div
+        client:visible
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        className="m-auto w-full sm:block sm:col-span-2"
+      >
         <img class="img_photo" loading="lazy" src="/assets/photo__.jpg" alt="Foto de Leonardo H" />
-      </div>
+      </motion.div>
       <div class="sm:col-span-3 p-2">
         <p>
           Con más de 5 años de experiencia destacada en la creación y optimización de aplicaciones y páginas
           web, me enfoco en proporcionar soluciones innovadoras a empresas que buscan potenciar su presencia
           digital. Mi especialización se centra en el
-          <span class="important">desarrollo de front-end</span> con enfoque principal en <span
-            class="important">React</span
-          >, así como en la implementación efectiva de <span class="important">Python</span> para optimizar procesos.
+          <span class="important">desarrollo front-end</span> con enfoque principal en <span class="important"
+            >React</span
+          > y <span class="important">AstroJS</span>, este ultimo especialmente para crear hermosos sitios web
+          interactivos y amigables con el SEO (SSR) para optimizar el posicionamiento web.
         </p>
         <p>
           Durante mi trayectoria, he demostrado habilidades sobresalientes en la creación de
@@ -26,8 +34,8 @@ import TitleSection from '../../title-section.astro';
           líderes como
           <span class="important">Angular, Astro, React y Tailwind CSS</span>. Mi experiencia también abarca
           el uso de
-          <span class="important">.NET</span> y
-          <span class="important">Django</span>.
+          <span class="important">.NET (C#)</span> y
+          <span class="important">Django (Python)</span>.
         </p>
         <p class="">
           En el ámbito de bases de datos, tengo experiencia práctica con sistemas como <span class="important"
