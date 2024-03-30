@@ -3,4 +3,5 @@ export interface IServices {
   alt: string;
   title: string;
   description: string;
+  color: string;
 }

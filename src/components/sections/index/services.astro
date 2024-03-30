@@ -9,19 +9,28 @@ import TitleSection from '../../title-section.astro';
   <div class="services-container grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-4">
     {
       MyServices.map((x) => (
-        <div>
+        <motion.div
+          client:visible
+          layout
+          initial={{ backgroundImage: `linear-gradient(to bottom, transparent, ${x.color} )` }}
+          whileInView={{ backgroundColor: x.color }}
+          whileHover={{ boxShadow: `0 0 5px ${x.color}` }}
+          transition={{ delay: 0.2 }}
+          className="cursor-pointer"
+        >
           <img class="icon_service" src={x.icon} alt={x.alt} />
           <h2 class="title_service">{x.title}</h2>
+
           <motion.p
             client:visible
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.1 }}
-            className="opacity-70"
+            transition={{ delay: 0.2 }}
+            className="opacity-60"
           >
             {x.description}
           </motion.p>
-        </div>
+        </motion.div>
       ))
     }
   </div>
@@ -32,46 +41,6 @@ import TitleSection from '../../title-section.astro';
     padding: 10px 20px;
     border-radius: 10px;
     position: relative;
-  }
-
-  .services-container div {
-    transition: all 0.3s linear;
-  }
-
-  .services-container div:nth-child(1) {
-    border-color: var(--cl-purple);
-    background-image: linear-gradient(to bottom, transparent, var(--cl-purple));
-  }
-
-  .services-container div:nth-child(1):hover {
-    background-color: var(--cl-purple);
-  }
-
-  .services-container div:nth-child(2) {
-    border-color: var(--cl-red);
-    background-image: linear-gradient(to bottom, transparent, var(--cl-red));
-  }
-
-  .services-container div:nth-child(2):hover {
-    background-color: var(--cl-red);
-  }
-
-  .services-container div:nth-child(3) {
-    border-color: var(--cl-pink);
-    background-image: linear-gradient(to bottom, transparent, var(--cl-pink));
-  }
-
-  .services-container div:nth-child(3):hover {
-    background-color: var(--cl-pink);
-  }
-
-  .services-container div:nth-child(4) {
-    border-color: var(--cl-blue);
-    background-image: linear-gradient(to bottom, transparent, var(--cl-blue));
-  }
-
-  .services-container div:nth-child(4):hover {
-    background-color: var(--cl-blue);
   }
 
   .icon_service {
