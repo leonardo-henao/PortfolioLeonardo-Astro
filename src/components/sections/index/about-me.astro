@@ -1,5 +1,6 @@
 ---
 import { motion } from 'framer-motion';
+import ProgrammingLanguages from '../../ProgrammingLanguages';
 import TitleSection from '../../title-section.astro';
 ---
 
@@ -55,22 +56,22 @@ import TitleSection from '../../title-section.astro';
       organización.
     </div>
   </div>
+  <ProgrammingLanguages client:visible />
+  <style>
+    p {
+      margin: 1rem 0;
+      padding: 4px;
+    }
+
+    .content-aboutme {
+      background-color: var(--cl-black-02);
+      border-radius: 1rem;
+    }
+
+    .content-aboutme .img_photo {
+      border-radius: 1rem 0 0 1rem;
+      max-width: 350px;
+      margin: 0.5rem auto;
+    }
+  </style>
 </article>
-
-<style>
-  p {
-    margin: 1rem 0;
-    padding: 4px;
-  }
-
-  .content-aboutme {
-    background-color: var(--cl-black-02);
-    border-radius: 1rem;
-  }
-
-  .content-aboutme .img_photo {
-    border-radius: 1rem 0 0 1rem;
-    max-width: 350px;
-    margin: 0.5rem auto;
-  }
-</style>

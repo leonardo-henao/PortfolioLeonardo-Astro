@@ -1,5 +1,16 @@
 ---
 import './index.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'Desarrollador de software Cali - Colombia' } = Astro.props;
+const metaDescription =
+  'Desarrollador de software en Cali - Colombia especializado en la creación de páginas web con tecnologias como HTML, CSS, JavaScript, TypeScript, React, Astro JS y Angular. Con experiencia tambien en el manejo de Django (Python), .NET (C#) y creación de aplicaciones para Android con Kotlin.';
+const metaKeywords =
+  'Desarrollador de software, creación pagina web, React, Astro JS, Leonardo henao, Desarrollador cali colombia';
+const image = '/assets/brand.jpg';
 ---
 
 <html lang="es">
@@ -8,15 +19,25 @@ import './index.css';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>Portafolio Leonardo Henao</title>
+    <title>Leonardo Henao | {title}</title>
 
     <link rel="icon" type="image/*" href="/icon.svg" />
     <meta name="theme-color" content="#17181d" />
 
-    <meta
-      name="description"
-      content="Desarrollador de software con experiencia en lenguajes como C#, Python, JavaScript, Kotlin, HTML, CSS y más. Especializado en el desarrollo de aplicaciones web y móviles utilizando frameworks como Django y .NET. Apasionado por la resolución de problemas y la creación de soluciones innovadoras."
-    />
+    <meta name="description" content={metaDescription} />
+    <meta name="author" content="Leonardo Henao" />
+    <meta name="keywords" content={metaKeywords} />
+
+    <meta property="og:url" content="https://leonardohenao.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`Leonardo Henao | ${title}`} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:image" content={image} />
+
+    <meta name="twitter:title" content={`Leonardo Henao | ${title}`} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:site" content="https://leonardohenao.com" />
+    <meta name="twitter:image" content={image} />
 
     <!-- Google tag (gtag.js) -->
     <script

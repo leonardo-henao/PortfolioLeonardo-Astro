@@ -105,3 +105,18 @@ article {
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
+.container-anim-running {
+    -webkit-mask: linear-gradient(90deg, transparent, white, white, transparent);
+    mask: linear-gradient(90deg, transparent, white, white, transparent);
+}
+
+.running-animate {
+    animation: running_anim 35s linear infinite;
+}
+
+@keyframes running_anim {
+    to {
+        transform: translate(calc(-50%));
+    }
+}
