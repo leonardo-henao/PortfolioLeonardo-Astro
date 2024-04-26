@@ -1,12 +1,10 @@
-import { useGetUrlDownloadApp } from '../hooks/useGetUrlDownloadApp';
+import { useGetUrlDownloadApp } from '.';
 
 export const ButtonDownloadApp = ({ message, className }) => {
   const [urlDownload] = useGetUrlDownloadApp();
 
   return (
-    <button
-      className={className}
-      onClick={() => window.open(urlDownload, '_blank')}>
+    <button className={className} onClick={() => window.open(urlDownload, '_blank')}>
       {message}
     </button>
   );

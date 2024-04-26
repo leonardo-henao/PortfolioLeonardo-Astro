@@ -1,4 +1,4 @@
-import { useChangeTheme } from '../hooks/useChangeTheme.js';
+import { useChangeTheme } from '.';
 
 export const ButtonChangeTheme = () => {
   const [theme, changeTheme] = useChangeTheme(null);

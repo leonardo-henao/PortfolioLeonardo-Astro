@@ -12,6 +12,25 @@ export const AllWebProjects: IPortfolioProject[] = [
     link: 'https://fuxionjohanamartinez.com',
   },
   {
+    name: 'Memory cleaner - Website',
+    image: '/images_apps/memorycleaner-website.png',
+    imageBackground: '/images/blob-haikei-pink.svg',
+    description:
+      'Atractivo sitio web con tema oscuro y claro, idiomas ingles y español, enfocado en informar sobre funcionalidad de la aplicación y obtener descargas. Sitio web interactivo con animaciones y efectos visuales agradables que mejoran la experiencia de navegación.',
+    toolsUsed: [
+      'Astro',
+      'Typescript',
+      'Javascript',
+      'CSS',
+      'Framer motion',
+      'React components',
+      'Tailwind CSS',
+      'Vercel',
+      'Lottie',
+    ],
+    link: 'https://leonardohenao.com/tecnolapps/limpiador-de-memoria',
+  },
+  {
     name: 'Macrosss',
     image: '/images_apps/macrosss.jpg',
     imageBackground: '/images/blob-haikei-blue.svg',
@@ -40,19 +59,19 @@ export const AllWebProjects: IPortfolioProject[] = [
     toolsUsed: ['Astro', 'Tailwind CSS', 'Mysql', 'Firebase Authentication', 'Vercel'],
     link: 'https://www.iptvlistasm3u.com/',
   },
-  {
-    name: 'Rick and Morty - API',
-    image: '/images_apps/rick-and-morty.jpg',
-    imageBackground: '/images/blob-haikei-pink.svg',
-    description:
-      'Este proyecto web exhibe habilidades técnicas en el desarrollo de aplicaciones utilizando JavaScript modular, CSS puro y sigue el patrón Modelo-Vista-Controlador (MVC). Utiliza la API de Rick and Morty como un ejemplo concreto para demostrar el manejo de datos y la interacción con el DOM, proporcionando así una experiencia interactiva y atractiva para el usuario.',
-    toolsUsed: ['Javascript Vanilla', 'Javascript modular', 'CSS', 'MVC', 'Consumo de rest API', 'Vercel'],
-    link: 'https://sofka-rick-and-morty-api-c4.vercel.app/',
-  },
 ];
 
 // Aplicaciones para android
 export const AllAndroidProjects: IPortfolioProject[] = [
+  {
+    name: 'Wallpplus',
+    image: '/images_apps/wallpplus-android.jpg',
+    imageBackground: '/images/blob-haikei-pink.svg',
+    description:
+      'Mas de 3000 fondos de pantalla en alta resolución, descarga y configura fácilmente los fondos en el dispositivo. Desarrollada en Kotlin, implementa mecanismos para optimizar el cache y mejorar la carga y visualización de las imágenes.',
+    toolsUsed: ['Kotlin', 'XML', 'Play Store', 'Volley', 'Glide'],
+    link: 'https://play.google.com/store/apps/details?id=com.ds.wallpup',
+  },
   {
     name: 'Limpiador de Memoria',
     image: '/images_apps/memory_cleaner.jpg',
@@ -62,7 +81,6 @@ export const AllAndroidProjects: IPortfolioProject[] = [
     toolsUsed: ['Kotlin', 'XML', 'Lottie', 'Play Store', 'Google Play Billing'],
     link: 'https://play.google.com/store/apps/details?id=com.ds.memorycleaner',
   },
-
   {
     name: 'IPTV Listas M3U',
     image: '/images_apps/iptv_lists_android.jpg',

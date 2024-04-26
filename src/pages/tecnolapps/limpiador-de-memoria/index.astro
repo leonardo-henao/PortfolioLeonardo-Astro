@@ -1,16 +1,17 @@
 ---
-
+// <meta http-equiv="refresh" content="0;url=/tecnolapps/limpiador-de-memoria/en/" />
 ---
 
-<!-- <meta http-equiv="refresh" content="0;url=/tecnolapps/limpiador-de-memoria/en/" /> -->
 <script is:inline>
   if (window == undefined || window == null) {
     window.location.href = '/tecnolapps/limpiador-de-memoria/en/';
   } else {
     const language = navigator.language;
-    const path = window.location.pathname;
+    var path = window.location.pathname;
 
-    if (language.includes('es') || language.includes('ES')) window.location.href = `${path}es`;
-    else window.location.href = `${path}en`;
+    if (!path.endsWith('/')) path = `${path}/`;
+
+    if (language.includes('es') || language.includes('ES')) window.location.href = `${path}es/`;
+    else window.location.href = `${path}en/`;
   }
 </script>

@@ -10,12 +10,6 @@ const { name, url, storeImage } = Astro.props;
 
 <li>
   <a href={url} target="_blank" rel="noopener noreferrer" class="p-4">
-    <img
-      title={name}
-      class="m-auto"
-      loading="lazy"
-      src={storeImage}
-      alt={`Imagen tienda ${name}`}
-    />
+    <img title={name} class="m-auto" loading="lazy" src={storeImage} alt={`Imagen tienda ${name}`} />
   </a>
 </li>
