@@ -7,7 +7,7 @@ const { lottieAnim, titleCard, textCard } = Astro.props;
 
 <div class="card-characteristics">
   <motion.div className="min-h-4" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} client:visible>
-    <LottieAnimation src={lottieAnim} autoplay={true} loop={true} />
+    <LottieAnimation src={lottieAnim} player="light" autoplay="visible" loop={true} />
   </motion.div>
   <div>
     <h3 class="font-bold text-center text-lg mb-2 overflow-ellipsis line-clamp-1">

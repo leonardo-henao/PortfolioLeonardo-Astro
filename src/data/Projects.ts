@@ -4,7 +4,7 @@ import type { IPortfolioProject } from '../interfaces/IPortfolioProject';
 export const AllWebProjects: IPortfolioProject[] = [
   {
     name: 'Johana Martinez',
-    image: '/images_apps/fuxionjohanamartinez.png',
+    image: '/images_apps/fuxionjohanamartinez.jpg',
     imageBackground: '/images/blob-haikei-purple.svg',
     description:
       'Destaca por su diseño atractivo y funcionalidad, en los cuales trabajé exclusivamente. Con un enfoque claro en la captación de clientes, la página refleja profesionalismo y facilita la interacción con los visitantes.',
@@ -13,7 +13,7 @@ export const AllWebProjects: IPortfolioProject[] = [
   },
   {
     name: 'Memory cleaner - Website',
-    image: '/images_apps/memorycleaner-website.png',
+    image: '/images_apps/memorycleaner-website.jpg',
     imageBackground: '/images/blob-haikei-pink.svg',
     description:
       'Atractivo sitio web con tema oscuro y claro, idiomas ingles y español, enfocado en informar sobre funcionalidad de la aplicación y obtener descargas. Sitio web interactivo con animaciones y efectos visuales agradables que mejoran la experiencia de navegación.',
@@ -52,7 +52,7 @@ export const AllWebProjects: IPortfolioProject[] = [
   },
   {
     name: 'IPTV Listas M3U Website',
-    image: '/images_apps/iptv_lists_website.png',
+    image: '/images_apps/iptv_lists_website.jpg',
     imageBackground: '/images/blob-haikei.svg',
     description:
       'Sitio web del proyecto IPTV Listas M3U que refleja la innovación y la utilidad de nuestra aplicación, diseñado para mejorar su experiencia y facilitar su acceso a esta herramienta.',
