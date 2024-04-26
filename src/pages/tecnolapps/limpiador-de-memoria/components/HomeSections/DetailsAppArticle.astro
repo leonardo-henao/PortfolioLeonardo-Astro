@@ -1,0 +1,27 @@
+---
+import ButtonDownloadApp from '../ButtonDownloadApp';
+import { motion } from 'framer-motion';
+
+interface Props {
+  language: string;
+}
+
+const { language } = Astro.props;
+
+const isSpanish = language == 'es';
+---
+
+<article class="mx-auto my-8 p-2 sm:p-4">
+  <motion.div
+    initial={{ scale: 0.7 }}
+    whileInView={{ scale: 1 }}
+    client:visible
+    className="article_details p-4"
+  >
+    <ButtonDownloadApp
+      client:visible
+      className="bg-white text-gray-800 my-8 py-4 px-8 rounded-sm mx-auto block"
+      message={isSpanish ? '¡Empieza a acelerar tu dispositivo YA!' : 'Start speeding up your device NOW!'}
+    />
+  </motion.div>
+</article>

@@ -1,0 +1,76 @@
+---
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/layout.astro';
+---
+
+<Layout>
+  <Navbar language="es" />
+  <main>
+    <article class="mx-auto p-8">
+      <h3 class="text-2xl text-center">Política de Privacidad</h3>
+      <h5 class="text-center text-sm text-gray-400">Fecha de entrada en vigencia: 25 Noviembre del 2023</h5>
+      <p>
+        Bienvenido/a. <br />
+      </p> Esta página informa a los usuarios sobre nuestras políticas en la recopilación, uso y divulgación de
+      la información personal que recibimos de los usuarios del sitio
+
+      <div>
+        <h3 class="title-legal">1. Información Recopilada por Terceros: Google Analytics y Facebook Pixel</h3>
+        <p>
+          Utilizamos herramientas de análisis de terceros, como Google Analytics y Facebook Pixel, para
+          recopilar información estándar del registro del navegador de Internet y patrones de comportamiento
+          de los visitantes. Esta información se recopila de manera anónima y se utiliza para analizar
+          tendencias, administrar el sitio, rastrear el movimiento del usuario en el sitio y recopilar
+          información demográfica. No intentamos vincular esta información con la identidad personal del
+          usuario.
+        </p>
+        <p class="mt-4">
+          Para obtener más información sobre cómo Google Analytics y Facebook Pixel recopilan y procesan
+          datos, le recomendamos revisar las políticas de privacidad de Google y Facebook, respectivamente.
+        </p>
+      </div>
+      <div>
+        <h3 class="title-legal">2. Enlaces a Sitios Externos</h3>
+        <p>
+          Nuestro sitio puede contener enlaces a otros sitios web que no están bajo nuestro control. No somos
+          responsables de las prácticas de privacidad ni del contenido de estos sitios web. Al hacer clic en
+          un enlace externo, el usuario debe revisar la política de privacidad del sitio en cuestión.
+        </p>
+      </div>
+      <div>
+        <h3 class="title-legal">3. Cookies y Tecnologías Similares</h3>
+        <p>
+          Utilizamos cookies y tecnologías similares para mejorar la experiencia del usuario en nuestro sitio.
+          Estas tecnologías nos permiten personalizar el contenido, analizar el tráfico del sitio y
+          proporcionar funciones de redes sociales. Al utilizar nuestro sitio, usted acepta el uso de estas
+          tecnologías.
+        </p>
+      </div>
+      <div>
+        <h3 class="title-legal">4. Cambios en la Política de Privacidad</h3>
+        <p>
+          Nos reservamos el derecho de actualizar o cambiar nuestra política de privacidad en cualquier
+          momento. Cualquier cambio se hará efectivo inmediatamente después de que publiquemos la versión
+          actualizada en el sitio. Le recomendamos que revise periódicamente esta página para estar informado
+          sobre cualquier cambio en nuestra política de privacidad.
+        </p>
+      </div>
+      <div>
+        <h3 class="title-legal">5. Contacto</h3>
+        <p>
+          Si tiene alguna pregunta sobre esta política de privacidad, puede ponerse en contacto con nosotros
+          al siguiente
+          <a href="mailto:lappsmov@gmail.com" class="text-blue-600">
+            {' '}
+            correo
+          </a>
+        </p>
+        <p class="mt-4">
+          Al utilizar nuestro sitio, usted acepta los términos de esta política de privacidad.
+        </p>
+      </div>
+    </article>
+  </main>
+  <Footer language="es" />
+</Layout>

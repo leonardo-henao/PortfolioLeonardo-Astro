@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif&family=Poppins&display=swap');
+
+:root {
+    --primary-color: #f33434;
+    --accent-color: #FF8A80;
+    --border-radius-buttons: .4rem;
+    --border-radius-sections: 1rem;
+
+    --light-font: #212121;
+    --dark-font: #e9e9e9;
+}
+
+body {
+    font-family: "Poppins";
+    overflow-x: hidden;
+}
+
+.body_light {
+    background-color: white;
+    color: var(--light-font);
+    box-shadow: 0 0 2px white;
+}
+
+.body_dark {
+    background-color: var(--light-font);
+    color: white;
+    box-shadow: 0 0 2px var(--light-font);
+}
+
+.poppins {
+    font-family: "Poppins";
+}
+
+.dm {
+    font-family: "DM Serif";
+}
+
+article {
+    max-width: 1024px;
+    margin: 2rem 0;
+}
+
+/* #region NAVBAR */
+
+.brand {
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+}
+
+.brand::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: -4.45rem;
+    bottom: 0;
+
+    border-color: var(--primary-color) transparent transparent transparent;
+    border-style: solid;
+    border-width: 4.5rem 4.5rem 1rem 0;
+
+}
+
+.brand img {
+    margin: 0 .2rem;
+    border-radius: .5rem;
+}
+
+.question_navbar {
+    font-size: 0;
+}
+
+.button_download-navbar {
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-name: anim_button_download_navbar;
+    border-radius: var(--border-radius-buttons);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: .5rem 1rem;
+    position: relative;
+}
+
+.button_download-navbar:hover {
+    animation-iteration-count: infinite;
+}
+
+@keyframes anim_button_download_navbar {
+    0% {
+        transform: rotateZ(20deg);
+    }
+
+    40% {
+        transform: rotateZ(-10deg);
+    }
+
+    70% {
+        transform: rotateZ(8deg);
+    }
+
+    90% {
+        transform: rotateZ(-5deg);
+    }
+
+    100% {
+        transform: rotateZ(2deg);
+    }
+}
+
+/* #endregion */
+
+.text-caption {
+    font-size: .7rem;
+    color: gray;
+}
+
+.text-important {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0 .3rem;
+    font-size: 2rem;
+}
+
+.card-characteristics {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: var(--border-radius-sections);
+    color: white;
+}
+
+.article_details {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius-sections);
+}
+
+.list-brands-trust-dark {
+    background-color: #3a3a3a;
+}
+
+.list-brands-trust img {
+    max-width: 220px;
+    max-height: 4rem;
+    filter: grayscale(100%);
+
+    transition: all .2s ease-in-out;
+}
+
+.list-brands-trust img:hover {
+    filter: grayscale(0%);
+}
+
+.button-change-theme {
+    position: fixed;
+    right: 0;
+    top: 6rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem 0 0 1rem;
+    filter: invert(100%);
+}
+
+/* Políticas de privacidad */
+
+.title-legal {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+@media (min-width:1024px) {
+    .question_navbar {
+        font-size: 1.2rem;
+    }
+}

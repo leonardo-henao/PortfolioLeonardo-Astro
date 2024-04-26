@@ -1,0 +1,74 @@
+---
+import { motion } from 'framer-motion';
+
+interface Props {
+  language: string;
+}
+
+const { language } = Astro.props;
+
+const isSpanish = language == 'es';
+---
+
+<article class="py-4 sm:py-14 px-4 flex flex-col sm:flex-row items-center justify-center mx-auto">
+  <div class="sm:w-3/6">
+    <motion.h2
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      client:visible
+      className="text-5xl dm font-bold"
+    >
+      {isSpanish ? 'El mejor limpiador de memoria' : 'The best memory cleaner'}
+      <span class="text-important">
+        {isSpanish ? 'GRATIS!' : 'FREE!'}
+      </span>
+    </motion.h2>
+    <motion.h3
+      initial={{ opacity: 0, translateX: -30 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      client:visible
+      className="text-start opacity-80 mt-2"
+    >
+      {
+        isSpanish
+          ? 'La solución definitiva para liberar memoria en tu teléfono Android.'
+          : 'The definitive solution to free up memory on your Android phone.'
+      }
+    </motion.h3>
+    <motion.div
+      initial={{ scale: 1.2 }}
+      whileInView={{ scale: 1 }}
+      client:visible
+      className="w-3/6 mt-4 mb-0 mx-auto"
+    >
+      <a
+        href="https://play.google.com/store/apps/details?id=com.ds.memorycleaner&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+      >
+        <img
+          loading="lazy"
+          alt={isSpanish ? 'Disponible en Google Play' : 'Available on Google Play'}
+          src={isSpanish
+            ? 'https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png'
+            : 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'}
+        />
+      </a>
+      <motion.span
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        client:visible
+        className="text-caption -mt-1 block text-center"
+      >
+        {isSpanish ? ' Más de 100mil descargas' : 'More than 100 thousand downloads'}
+      </motion.span>
+    </motion.div>
+  </div>
+  <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} client:visible>
+    <img
+      loading="lazy"
+      id="screenshot-app"
+      class="w-4/6 mx-auto"
+      src=""
+      alt={isSpanish ? 'Captura de pantalla de la aplicación' : 'Screenshot of the application'}
+    />
+  </motion.div>
+</article>

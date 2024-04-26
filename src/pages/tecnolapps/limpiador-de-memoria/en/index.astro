@@ -1,0 +1,21 @@
+---
+import FirstArticle from '../components/HomeSections/FirstArticle.astro';
+import DetailsAppArticle from '../components/HomeSections/DetailsAppArticle.astro';
+import CompaniesThatTrust from '../components/HomeSections/CompaniesThatTrust.astro';
+import WhatIsBestMemoryCleaner from '../components/HomeSections/WhatIsBestMemoryCleaner.astro';
+
+import Layout from '../layouts/layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar language="en" />
+  <main class={`mx-auto`}>
+    <FirstArticle language="en" />
+    <WhatIsBestMemoryCleaner language="en" />
+    <DetailsAppArticle language="en" />
+    <CompaniesThatTrust language="en" />
+  </main>
+  <Footer language="en" />
+</Layout>

@@ -1,0 +1,46 @@
+---
+import ButtonChangeTheme from '../components/ButtonChangeTheme';
+
+import './global.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/limpiador-de-memoria/icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#f33434" />
+
+    <title>Limpiador de memoria Android</title>
+    <meta
+      name="description"
+      content="Aplicación de limpiador de memoria para celular android, limpiador de móvil y cache"
+    />
+
+    <link rel="apple-touch-icon" href="/limpiador-de-memoria/apple-icon/apple-touch-icon-iphone-60x60.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/limpiador-de-memoria/apple-icon/apple-touch-icon-ipad-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/limpiador-de-memoria/apple-icon/apple-touch-icon-iphone-retina-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/limpiador-de-memoria/apple-icon/apple-touch-icon-ipad-retina-152x152.png"
+    />
+
+    <meta name="author" content="@lhenaoll" />
+    <meta name="copyright" content="@lhenaoll" />
+    <meta name="robots" content="index, follow" />
+  </head>
+  <body id="root">
+    <ButtonChangeTheme client:only />
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,46 @@
+---
+interface Props {
+  language: string;
+}
+
+const { language } = Astro.props;
+
+const isSpanish = language == 'es';
+---
+
+<footer class="py-12 mt-12 px-4 text-sm text-gray-600 flex flex-wrap justify-around">
+  <ul class="">
+    <li>
+      <a href={`/tecnolapps/limpiador-de-memoria/${language}/privacy-policies`}>
+        {isSpanish ? 'Políticas de privacidad' : 'Privacy policies'}
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://play.google.com/store/apps/dev?id=7404460400144886326"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {isSpanish ? 'Más aplicaciones' : 'More applications'}
+      </a>
+    </li>
+    <li>
+      <a href="mailto:lappsmov@gmail.com">
+        {isSpanish ? 'Contacto' : 'Contact'}
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a href="https://www.instagram.com/tecnolapps/" target="_blank" rel="noopener noreferrer">
+        TecnoLapps</a
+      >
+    </li>
+  </ul>
+  <ul>
+    <li class="">
+      <a href="/tecnolapps/limpiador-de-memoria/es">ES</a> |
+      <a href="/tecnolapps/limpiador-de-memoria/en">EN</a>
+    </li>
+  </ul>
+</footer>
