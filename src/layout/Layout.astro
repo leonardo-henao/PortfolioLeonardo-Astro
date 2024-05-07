@@ -1,61 +1,62 @@
 ---
-import './index.css';
+import "./index.css";
 
 interface Props {
-  title?: string;
+	title?: string;
 }
 
-const { title = 'Desarrollador de software Cali - Colombia' } = Astro.props;
+const { title = "Desarrollador de software Cali - Colombia" } = Astro.props;
 const metaDescription =
-  'Desarrollador de software en Cali - Colombia especializado en la creación de páginas web con tecnologias como HTML, CSS, JavaScript, TypeScript, React, Astro JS y Angular. Con experiencia en Django, .NET (C#) y creación de aplicaciones para Android (Kotlin)';
+	"Desarrollador de software en Cali - Colombia especializado en la creación de páginas web con tecnologias como HTML, CSS, JavaScript, TypeScript, React, Astro JS y Angular. Con experiencia en Django, .NET (C#) y creación de aplicaciones para Android (Kotlin)";
 const metaKeywords =
-  'Desarrollador de software, creación pagina web, React, Astro JS, Leonardo henao, Desarrollador cali colombia';
-const image = '/assets/brand.jpg';
+	"Desarrollador de software, creación pagina web, React, Astro JS, Leonardo henao, Desarrollador cali colombia";
+const image = "/assets/brand.jpg";
 ---
 
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
 
-    <title>Leonardo Henao | {title}</title>
+		<title>Leonardo Henao | {title}</title>
 
-    <link rel="icon" type="image/*" href="/icon.svg" />
-    <meta name="theme-color" content="#17181d" />
+		<link rel="icon" type="image/*" href="/icon.svg" />
+		<meta name="theme-color" content="#17181d" />
 
-    <meta name="description" content={metaDescription} />
-    <meta name="author" content="Leonardo Henao" />
-    <meta name="keywords" content={metaKeywords} />
+		<meta name="description" content={metaDescription} />
+		<meta name="author" content="Leonardo Henao" />
+		<meta name="keywords" content={metaKeywords} />
 
-    <meta property="og:url" content="https://leonardohenao.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={`Leonardo Henao | ${title}`} />
-    <meta property="og:description" content={metaDescription} />
-    <meta property="og:image" content={image} />
+		<meta property="og:url" content="https://leonardohenao.com" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={`Leonardo Henao | ${title}`} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="og:image" content={image} />
 
-    <meta name="twitter:title" content={`Leonardo Henao | ${title}`} />
-    <meta name="twitter:description" content={metaDescription} />
-    <meta name="twitter:site" content="https://leonardohenao.com" />
-    <meta name="twitter:image" content={image} />
+		<meta name="twitter:title" content={`Leonardo Henao | ${title}`} />
+		<meta name="twitter:description" content={metaDescription} />
+		<meta name="twitter:site" content="https://leonardohenao.com" />
+		<meta name="twitter:image" content={image} />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      is:inline
-      type="text/partytown"
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-C7YN8M7EE6"></script>
-    <script is:inline type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
+		<!-- Google tag (gtag.js) -->
+		<script
+			is:inline
+			type="text/partytown"
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-C7YN8M7EE6"></script>
+		<script is:inline type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-      gtag('config', 'G-C7YN8M7EE6');
-    </script>
-  </head>
-  <body>
-    <slot />
-  </body>
+			gtag("config", "G-C7YN8M7EE6");
+		</script>
+	</head>
+	<body>
+		<div>hola</div>
+		<slot />
+	</body>
 </html>

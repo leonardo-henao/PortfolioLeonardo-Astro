@@ -1,47 +1,52 @@
 ---
-import { motion } from 'framer-motion';
-import { AllAndroidProjects, AllWebProjects } from '../../../data/Projects';
-import SwiperProjects from '../../swiper-projects.astro';
-import TitleSection from '../../title-section.astro';
+import { motion } from "framer-motion";
+import { AllAndroidProjects, AllWebProjects } from "../../../data/Projects";
+import SwiperProjects from "../../swiper-projects.astro";
+import TitleSection from "../../title-section.astro";
 ---
 
 <article id="portfolio">
-  <TitleSection title="Portafolio" />
-  <div class="mx-auto">
-    <motion.h3
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      client:visible
-      className="opacity-40 text-lg my-4 mx-auto pl-4 max-w-7xl">Sitios y Aplicaciones WEB</motion.h3
-    >
-    <div class="">
-      <SwiperProjects projects={AllWebProjects} />
-    </div>
+	<TitleSection title="Portafolio" />
+	<div class="mx-auto">
+		<motion.h3
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			client:visible
+			className="opacity-40 text-lg my-4 mx-auto pl-4 max-w-7xl"
+			>Sitios y Aplicaciones WEB</motion.h3
+		>
+		<div class="">
+			<SwiperProjects projects={AllWebProjects} />
+		</div>
 
-    <motion.h3
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      client:visible
-      className="opacity-40 text-lg mt-8 mb-4 mx-auto pl-4 max-w-7xl">Aplicaciones Android</motion.h3
-    >
-    <div class="">
-      <SwiperProjects projects={AllAndroidProjects} />
-    </div>
-  </div>
+		<motion.h3
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			client:visible
+			className="opacity-40 text-lg mt-8 mb-4 mx-auto pl-4 max-w-7xl"
+			>Aplicaciones Android</motion.h3
+		>
+		<div class="">
+			<SwiperProjects projects={AllAndroidProjects} />
+		</div>
+	</div>
 </article>
 
 <style is:global>
-  swiper-container::part(bullet) {
-    background-color: gray;
-  }
-  swiper-container::part(bullet-active) {
-    background-color: var(--cl-green1);
-  }
-  swiper-container::part(button-next),
-  swiper-container::part(button-prev) {
-    color: var(--cl-green1);
-    filter: drop-shadow(1px 1px 2px black);
-  }
+	swiper-container::part(bullet) {
+		background-color: gray;
+	}
+	swiper-container::part(bullet-active) {
+		background-color: var(--cl-green1);
+	}
+	swiper-container::part(button-next),
+	swiper-container::part(button-prev) {
+		color: var(--cl-green1);
+		filter: drop-shadow(1px 1px 2px black);
+	}
 </style>
 
-<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script
+	is:inline
+	src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+></script>
