@@ -48,7 +48,7 @@ export const AllWebProjects: IPortfolioProject[] = [
 			'Azure',
 			'Vercel',
 		],
-		link: 'https://macrosss.com',
+		link: 'https://macros-excel.vercel.app/',
 	},
 	{
 		name: 'IPTV Listas M3U Website',
@@ -57,7 +57,7 @@ export const AllWebProjects: IPortfolioProject[] = [
 		description:
 			'Sitio web del proyecto IPTV Listas M3U que refleja la innovación y la utilidad de nuestra aplicación, diseñado para mejorar su experiencia y facilitar su acceso a esta herramienta.',
 		toolsUsed: ['Astro', 'Tailwind CSS', 'Mysql', 'Firebase Authentication', 'Vercel'],
-		link: 'https://www.iptvlistasm3u.com/',
+		link: 'https://iptv-list.vercel.app/',
 	},
 ];
 
@@ -97,6 +97,6 @@ export const AllAndroidProjects: IPortfolioProject[] = [
 		description:
 			'Aplicación para Android donde los usuarios comparten listas de IPTV, el sistema funciona con un registro de cada usuario, limitaciones por tipos de usuario, cada usuario tiene un perfil publico al cual otros usuarios pueden acceder y ver el contenido compartido por el. Sistema de notificaciones push, diseñada con la librería Material Design. Backend creado en Python con Django.',
 		toolsUsed: ['Kotlin', 'Mysql', 'Firebase Authentication', 'Firebase Clod Messaging', 'Python', 'Django'],
-		link: 'https://iptvlistasm3u.com',
-	},
+		link: 'https://iptv-list.vercel.app/',
+	}
 ];
