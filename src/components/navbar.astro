@@ -1,52 +1,83 @@
 ---
-import { motion } from 'framer-motion';
-import { CgMenuRightAlt } from 'react-icons/cg';
-import { MdClose } from 'react-icons/md';
+import { motion } from "framer-motion";
+import { CgMenuRightAlt } from "react-icons/cg";
+import { MdClose } from "react-icons/md";
 
-const anim = { initial: { opacity: 0, translateX: 100 }, whileInView: { opacity: 1, translateX: 0 } };
+const anim = {
+	initial: { opacity: 0, translateX: 100 },
+	whileInView: { opacity: 1, translateX: 0 },
+};
 ---
 
-<nav class="w-full flex justify-evenly items-center kanit sticky top-0 bg-[#0b0b0e] z-40 text-white">
-  <div class="text-3xl p-4 w-[70%] md:w-[55%] lg:w-[60%]">
-    <a href="/">Leonardo H.</a>
-  </div>
-  <div onclick="controlMenu()" class="w-12 h-12 p-2 cursor-pointer md:hidden ml-auto text-3xl">
-    <CgMenuRightAlt />
-  </div>
-  <div>
-    <ul class="md:gap-4 md:p-4 hidden md:flex max-md:menu_mobile" id="menu">
-      <motion.li client:visible {...anim} transition={{ delay: 0.1 }} className="li_nav">
-        <a href="#" onclick="goToTop()">Inicio</a>
-      </motion.li>
-      <motion.li client:visible {...anim} transition={{ delay: 0.2 }} className="li_nav">
-        <a href="#about_me" onclick="controlMenu()">Sobre mi</a>
-      </motion.li>
-      <motion.li client:visible {...anim} transition={{ delay: 0.3 }} className="li_nav">
-        <a href="#services" onclick="controlMenu()">Servicios</a>
-      </motion.li>
-      <motion.li client:visible {...anim} transition={{ delay: 0.4 }} className="li_nav">
-        <a href="#portfolio" onclick="controlMenu()">Portafolio</a>
-      </motion.li>
-      <li class="cursor-pointer mt-8 text-2xl md:hidden" onclick="controlMenu()">
-        <MdClose />
-      </li>
-    </ul>
-  </div>
+<nav
+	class="w-full flex justify-evenly items-center kanit sticky top-0 bg-[#0b0b0e] z-40 text-white"
+>
+	<div class="text-3xl p-4 w-[70%] md:w-[55%] lg:w-[60%]">
+		<a href="/">Leonardo H.</a>
+	</div>
+	<div
+		onclick="controlMenu()"
+		class="w-12 h-12 p-2 cursor-pointer md:hidden ml-auto text-3xl"
+	>
+		<CgMenuRightAlt />
+	</div>
+	<div>
+		<ul class="md:gap-4 md:p-4 hidden md:flex max-md:menu_mobile" id="menu">
+			<motion.li
+				client:visible
+				{...anim}
+				transition={{ delay: 0.1 }}
+				className="li_nav"
+			>
+				<a href="#" onclick="goToTop()">Inicio</a>
+			</motion.li>
+			<motion.li
+				client:visible
+				{...anim}
+				transition={{ delay: 0.2 }}
+				className="li_nav"
+			>
+				<a href="#about_me" onclick="controlMenu()">Sobre mi</a>
+			</motion.li>
+			<motion.li
+				client:visible
+				{...anim}
+				transition={{ delay: 0.3 }}
+				className="li_nav"
+			>
+				<a href="#services" onclick="controlMenu()">Servicios</a>
+			</motion.li>
+			<motion.li
+				client:visible
+				{...anim}
+				transition={{ delay: 0.4 }}
+				className="li_nav"
+			>
+				<a href="#portfolio" onclick="controlMenu()">Portafolio</a>
+			</motion.li>
+			<li
+				class="cursor-pointer mt-8 text-2xl md:hidden"
+				onclick="controlMenu()"
+			>
+				<MdClose />
+			</li>
+		</ul>
+	</div>
 </nav>
 
 <script is:inline>
-  const controlMenu = () => {
-    const menuElement = document.getElementById('menu');
-    const classList = menuElement.classList;
+	const controlMenu = () => {
+		const menuElement = document.getElementById("menu");
+		const classList = menuElement.classList;
 
-    if (classList.contains('hidden')) {
-      classList.remove('hidden');
-      classList.add('flex');
-    } else classList.add('hidden');
-  };
+		if (classList.contains("hidden")) {
+			classList.remove("hidden");
+			classList.add("flex");
+		} else classList.add("hidden");
+	};
 
-  const goToTop = () => {
-    window.scroll(0, 0);
-    controlMenu();
-  };
+	const goToTop = () => {
+		window.scroll(0, 0);
+		controlMenu();
+	};
 </script>
