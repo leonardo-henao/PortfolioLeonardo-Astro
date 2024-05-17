@@ -5,79 +5,82 @@ import { FaGithub } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa6';
 import { IoLogoGooglePlaystore } from 'react-icons/io5';
 import { FaInstagram } from 'react-icons/fa';
+import Layout from '../layout/Layout.astro';
 ---
 
-<main class="py-8 px-4 max-w-lg mx-auto bg-[#0B0B0E] text-white">
-  <img class="size-44 rounded-[50%] mx-auto" src="/assets/photo__.jpg" alt="Leo's photo" />
-  <h1 class="text-3xl text-center my-4">Leonardo Henao</h1>
-  <h2 class="my-4 opacity-80 text-center">
-    Hi, i'm Leonardo Henao. Thank for you visiting.
-    <br />
-    You have here a list of my social networks.
-  </h2>
+<Layout>
+  <main class="py-8 px-4 max-w-lg mx-auto">
+    <img class="size-44 rounded-[50%] mx-auto" src="/assets/photo__.jpg" alt="Leo's photo" />
+    <h1 class="text-3xl text-center my-4">Leonardo Henao</h1>
+    <h2 class="my-4 opacity-80 text-center">
+      Hi, i'm Leonardo Henao. Thank for you visiting.
+      <br />
+      You have here a list of my social networks.
+    </h2>
 
-  <div>
-    <h3 class="opacity-50 text-lg">Content creative</h3>
-    <ul class="list-content flex flex-col gap-2">
-      <li>
-        <a href="http://twitch.com/lhenaoll" target="_blank" rel="noopener noreferrer">
-          <span class="text-purple-700 icon"><FaTwitch /></span>
-          Twitch
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/@lhenaoll" target="_blank" rel="noopener noreferrer">
-          <span class="text-red-600 icon"><FaYoutube /></span>
-          youtube</a
-        >
-      </li>
-    </ul>
-  </div>
-  <div>
-    <h3 class="opacity-50 text-lg mt-4">Social networks</h3>
-    <ul class="list-content flex flex-col gap-2">
-      <li>
-        <a href="http://instagram.com/lhenaoll" target="_blank" rel="noopener noreferrer">
-          <span class="text-[#fb00bcb0] icon"><FaInstagram /></span>
-          Instagram (lhenaoll)
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/program_ando/" target="_blank" rel="noopener noreferrer">
-          <span class="text-[#fb00bcb0] icon"><FaInstagram /></span>
-          Instagram (program_ando)
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div>
-    <h3 class="opacity-50 text-lg mt-4">Other networks</h3>
-    <ul class="list-content flex flex-col gap-2">
-      <li>
-        <a
-          href="https://play.google.com/store/apps/dev?id=7404460400144886326"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="text-[#62CF7F] icon"><IoLogoGooglePlaystore /></span>
-          Play Store
-        </a>
-      </li>
-      <li>
-        <a href="https://www.leonardohenao.com" target="_blank" rel="noopener noreferrer">
-          <span class="text-blue-500 icon"><TbWorldCheck /></span>
-          Website
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/leonardo-henao" target="_blank" rel="noopener noreferrer">
-          <span class="text-gray-400 icon"><FaGithub /></span>
-          Github
-        </a>
-      </li>
-    </ul>
-  </div>
-</main>
+    <div>
+      <h3 class="opacity-50 text-lg">Content creative</h3>
+      <ul class="list-content flex flex-col gap-2">
+        <li>
+          <a href="http://twitch.com/lhenaoll" target="_blank" rel="noopener noreferrer">
+            <span class="text-purple-700 icon"><FaTwitch /></span>
+            Twitch
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@lhenaoll" target="_blank" rel="noopener noreferrer">
+            <span class="text-red-600 icon"><FaYoutube /></span>
+            youtube</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="opacity-50 text-lg mt-4">Social networks</h3>
+      <ul class="list-content flex flex-col gap-2">
+        <li>
+          <a href="http://instagram.com/lhenaoll" target="_blank" rel="noopener noreferrer">
+            <span class="text-[#fb00bcb0] icon"><FaInstagram /></span>
+            Instagram (lhenaoll)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/program_ando/" target="_blank" rel="noopener noreferrer">
+            <span class="text-[#fb00bcb0] icon"><FaInstagram /></span>
+            Instagram (program_ando)
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="opacity-50 text-lg mt-4">Other networks</h3>
+      <ul class="list-content flex flex-col gap-2">
+        <li>
+          <a
+            href="https://play.google.com/store/apps/dev?id=7404460400144886326"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="text-[#62CF7F] icon"><IoLogoGooglePlaystore /></span>
+            Play Store
+          </a>
+        </li>
+        <li>
+          <a href="https://www.leonardohenao.com" target="_blank" rel="noopener noreferrer">
+            <span class="text-blue-500 icon"><TbWorldCheck /></span>
+            Website
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/leonardo-henao" target="_blank" rel="noopener noreferrer">
+            <span class="text-gray-400 icon"><FaGithub /></span>
+            Github
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+</Layout>
 <style>
   .list-content {
     background-color: #18181fa6;
