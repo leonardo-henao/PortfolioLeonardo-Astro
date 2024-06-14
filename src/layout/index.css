@@ -1,122 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Righteous&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Righteous&family=Poppins&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-	.li_nav {
-		@apply border-b-2 border-transparent hover:border-primary rounded-sm max-md:text-3xl
-	}
+  .li_nav {
+    @apply border-b-2 border-transparent hover:border-primary rounded-sm max-md:text-3xl;
+  }
 
-	.menu_mobile {
-		@apply max-md:bg-mobile fixed top-0 left-0 flex-col justify-center items-center w-screen h-screen z-50 enter_menu
-	}
+  .menu_mobile {
+    @apply max-md:bg-mobile fixed top-0 left-0 flex-col justify-center items-center w-screen h-screen z-50 enter_menu;
+  }
 
-	.bg-mobile {
-		background-image: linear-gradient(to bottom right, #161616, #080808 20%, #161616);
-	}
+  .bg-mobile {
+    background-image: linear-gradient(
+      to bottom right,
+      #161616,
+      #080808 20%,
+      #161616
+    );
+  }
 
-	.enter_menu {
-		animation: enter_menu .3s ease-in-out 1;
-	}
+  .enter_menu {
+    animation: enter_menu 0.3s ease-in-out 1;
+  }
 
-	@keyframes enter_menu {
-		0% {
-			transform: translateX(100%);
-		}
+  @keyframes enter_menu {
+    0% {
+      transform: translateX(100%);
+    }
 
-		90% {
-			transform: translateX(-5%);
-			width: 90%;
-		}
+    90% {
+      transform: translateX(-5%);
+      width: 90%;
+    }
 
-		100% {
-			transform: translateX(0%);
-		}
-	}
+    100% {
+      transform: translateX(0%);
+    }
+  }
 }
 
-
 :root {
-	--cl-black: #0b0b0e;
-	--cl-black-02: #030303;
-	--cl-red: #F54748;
-	--cl-pink: #ef5bc7;
-	--cl-white: #FBFBFB;
-	--cl-green1: #65c8b1;
-	--cl-blue: #02a2ff;
-	--cl-purple: #692663;
-	--cl-gray2: #1b1c22c4;
+  --cl-black: #0b0b0e;
+  --cl-black-02: #030303;
+  --cl-red: #f54748;
+  --cl-pink: #ef5bc7;
+  --cl-white: #fbfbfb;
+  --cl-green1: #65c8b1;
+  --cl-blue: #02a2ff;
+  --cl-purple: #692663;
+  --cl-gray2: #1b1c22c4;
 
-	--cl-font: rgb(230, 230, 230);
+  --cl-font: rgb(230, 230, 230);
 }
 
 .title_policy {
-	font-weight: bold;
-	font-size: 1.2rem;
-	margin: 1rem 0px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 1rem 0px;
 }
 
 .title_section {
-	font-size: 1.8rem;
-	font-weight: bold;
-	margin: 15px 0;
-	display: block;
-	letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 15px 0;
+  display: block;
+  letter-spacing: 0.1rem;
 }
 
 body,
 html {
-	font-family: 'Poppins', sans-serif;
-	background-color: var(--cl-black);
-	color: var(--cl-font);
-	scroll-behavior: smooth;
-	padding: 0px;
-	margin: 0px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--cl-black);
+  color: var(--cl-font);
+  scroll-behavior: smooth;
+  padding: 0px;
+  margin: 0px;
 }
 
 article {
-	margin: 3rem auto 0 auto;
-	max-width: 1200px;
-	padding-inline: .5rem;
+  margin: 3rem auto 0 auto;
+  max-width: 1200px;
+  padding-inline: 0.5rem;
 }
 
 .important {
-	color: var(--cl-green1);
+  color: var(--cl-green1);
 }
 
 .poppins {
-	font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .kanit {
-	font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 .righteous {
-	font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
 }
 
 .no-scrollbar {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .container-anim-running {
-	-webkit-mask: linear-gradient(90deg, transparent, white, white, transparent);
-	mask: linear-gradient(90deg, transparent, white, white, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white, white, transparent);
+  mask: linear-gradient(90deg, transparent, white, white, transparent);
 }
 
 .running-animate {
-	animation: running_anim 35s linear infinite;
+  animation: running_anim 35s linear infinite;
 }
 
 @keyframes running_anim {
-	to {
-		transform: translate(calc(-50%));
-	}
+  to {
+    transform: translate(calc(-50%));
+  }
+}
+
+@@keyframes name {
 }

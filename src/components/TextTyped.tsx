@@ -1,12 +1,12 @@
-import { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 
 const textPrincipal: string[] = [
-  'full-stack',
-  'de páginas web',
-  'de apps web',
-  'de apps para android',
-  'de software',
+  "full-stack",
+  "de páginas web",
+  "de apps web",
+  "de apps para android",
+  "de software",
 ];
 
 const TextTyped = () => {

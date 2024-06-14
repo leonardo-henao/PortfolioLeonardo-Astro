@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { DiDjango } from 'react-icons/di';
-import { FaAngular, FaCss3, FaHtml5, FaPython, FaReact } from 'react-icons/fa6';
-import { IoLogoJavascript } from 'react-icons/io';
+import { useState } from "react";
+import { DiDjango } from "react-icons/di";
+import { FaAngular, FaCss3, FaHtml5, FaPython, FaReact } from "react-icons/fa6";
+import { IoLogoJavascript } from "react-icons/io";
 import {
   SiAstro,
   SiCsharp,
@@ -13,7 +13,7 @@ import {
   SiVisualstudio,
   SiVisualstudiocode,
   SiWindows11,
-} from 'react-icons/si';
+} from "react-icons/si";
 let keyCount = 100;
 const getKey = () => {
   keyCount++;
@@ -40,7 +40,6 @@ const ProgrammingLanguages = () => {
     <SiVisualstudiocode key={getKey()} />,
     <SiKotlin key={getKey()} />,
   ]);
-
   return (
     <div className="my-24 outline-2 overflow-x-hidden container-anim-running">
       <div className="flex w-max *:min-w-14 *:mx-4 text-5xl md:text-6xl *:md:mx-10  *:lg:mx-8 running-animate opacity-80">

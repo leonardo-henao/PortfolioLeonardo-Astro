@@ -1,16 +1,21 @@
 ---
-import Layout from '../layout/Layout.astro';
-import LottieAnimation from '../components/LottieAnimation';
+import Layout from "../layout/Layout.astro";
+import LottieAnimation from "../components/LottieAnimation";
 ---
 
 <Layout title="Página no encontrada">
-  <article class="flex flex-col gap-4 h-screen w-screen justify-center items-center">
-    <div class="w-72 bg-white rounded-[50%]">
-      <LottieAnimation client:only />
-    </div>
-    <div>Oh! No encontramos lo que buscabas...</div>
-    <div>
-      <p>Tal vez te pueda interesar ir al <a class="important" href="/">inicio</a></p>
-    </div>
-  </article>
+	<article
+		class="flex flex-col gap-4 h-screen w-screen justify-center items-center"
+	>
+		<div class="w-72 bg-white rounded-[50%]">
+			<LottieAnimation client:only />
+		</div>
+		<div>Oh! No encontramos lo que buscabas...</div>
+		<div>
+			<p>
+				Tal vez te pueda interesar ir al <a class="important" href="/">inicio</a
+				>
+			</p>
+		</div>
+	</article>
 </Layout>

@@ -1,29 +1,29 @@
 ---
-import { ContactLinks } from '../data/ContactLinks';
+import { ContactLinks } from "../data/ContactLinks";
 ---
 
 <ul class="flex">
-  {
-    ContactLinks.map((x) => (
-      <li class="p-1 m-1">
-        <a href={x.link} target="_blank" rel="noopener noreferrer">
-          <img
-            src={x.icon}
-            alt={x.alt}
-            class={`${x.iconSmall ? 'icon-small' : ''} opacity-70 hover:opacity-100 transition-all`}
-          />
-        </a>
-      </li>
-    ))
-  }
+	{
+		ContactLinks.map((x) => (
+			<li class="p-1 m-1">
+				<a href={x.link} target="_blank" rel="noopener noreferrer">
+					<img
+						src={x.icon}
+						alt={x.alt}
+						class={`${x.iconSmall ? "icon-small" : ""} opacity-70 hover:opacity-100 transition-all`}
+					/>
+				</a>
+			</li>
+		))
+	}
 </ul>
 
 <style>
-  ul li img {
-    width: 1.6rem;
-  }
+	ul li img {
+		width: 1.6rem;
+	}
 
-  ul li .icon-small {
-    width: 1.4rem;
-  }
+	ul li .icon-small {
+		width: 1.4rem;
+	}
 </style>
