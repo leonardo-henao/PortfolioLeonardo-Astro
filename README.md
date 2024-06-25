@@ -1,10 +1,10 @@
 # Portafolio
 
-Portafolio Leonardo Henao 
+Portafolio Leonardo Henao
 
-# Creado con
+## Creado con
 
-- AstroJS 
+- AstroJS
 - TailwindCSS
 - React
 - Lottie
