@@ -35,7 +35,7 @@ export const AllWebProjects: IPortfolioProject[] = [
       "Vercel",
       "Lottie",
     ],
-    link: "https://leonardohenao.com/tecnolapps/limpiador-de-memoria",
+    link: "https://limpiador-de-memoria.vercel.app/en/",
   },
   {
     name: "Macrosss",
