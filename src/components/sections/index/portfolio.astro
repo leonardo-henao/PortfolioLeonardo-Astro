@@ -1,6 +1,10 @@
 ---
 import { motion } from "framer-motion";
-import { AllAndroidProjects, AllWebProjects } from "../../../data/Projects";
+import {
+	AllAndroidProjects,
+	AllWebProjects,
+	AllTwitchProjects,
+} from "../../../data/Projects";
 import SwiperProjects from "../../swiper-projects.astro";
 import TitleSection from "../../title-section.astro";
 ---
@@ -15,7 +19,7 @@ import TitleSection from "../../title-section.astro";
 			className="opacity-40 text-lg my-4 mx-auto pl-4 max-w-7xl"
 			>Sitios y Aplicaciones WEB</motion.h3
 		>
-		<div class="">
+		<div>
 			<SwiperProjects projects={AllWebProjects} />
 		</div>
 
@@ -26,8 +30,26 @@ import TitleSection from "../../title-section.astro";
 			className="opacity-40 text-lg mt-8 mb-4 mx-auto pl-4 max-w-7xl"
 			>Aplicaciones Android</motion.h3
 		>
-		<div class="">
+		<div>
 			<SwiperProjects projects={AllAndroidProjects} />
+		</div>
+
+		<motion.h3
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			client:visible
+			className="opacity-40 text-lg mt-8 mb-4 mx-auto pl-4 max-w-7xl"
+		>
+			On-Air Projects
+			<p class="opacity-40">
+				Projectos creados en vivo en mi canal de Twitch
+				<span class="block text-sm">
+					[Los projectos no se han adaptado a multiples pantallas]
+				</span>
+			</p>
+		</motion.h3>
+		<div>
+			<SwiperProjects projects={AllTwitchProjects} />
 		</div>
 	</div>
 </article>
@@ -37,11 +59,11 @@ import TitleSection from "../../title-section.astro";
 		background-color: gray;
 	}
 	swiper-container::part(bullet-active) {
-		background-color: var(--cl-green1);
+		background-color: rgb(var(--cl-green1));
 	}
 	swiper-container::part(button-next),
 	swiper-container::part(button-prev) {
-		color: var(--cl-green1);
+		color: rgb(var(--cl-green1));
 		filter: drop-shadow(1px 1px 2px black);
 	}
 </style>

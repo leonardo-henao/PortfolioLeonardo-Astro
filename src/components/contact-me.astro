@@ -1,26 +1,64 @@
 ---
-import { ContactLinks } from "../data/ContactLinks";
+import { ContactLinks , ContactOthers} from "../data/ContactLinks";
 ---
 
-<ul class="flex">
-	{
-		ContactLinks.map((x) => (
-			<li class="p-1 m-1">
-				<a href={x.link} target="_blank" rel="noopener noreferrer">
-					<img
-						src={x.icon}
-						alt={x.alt}
-						class={`${x.iconSmall ? "icon-small" : ""} opacity-70 hover:opacity-100 transition-all`}
-					/>
-				</a>
-			</li>
-		))
-	}
-</ul>
+<div class="w-full flex flex-row flex-wrap gap-2 justify-evenly">
+
+	<div>
+	<span class="text-2xl opacity-30">Contacto</span>
+	<ul>
+		{
+			ContactLinks.map((x) => (
+				<li class="p-1 m-1">
+					<a
+						class="flex gap-1"
+						href={x.link}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<!--<img-->
+						<!--	src={x.icon}-->
+						<!--	alt={x.alt}-->
+						<!--	class={`${x.iconSmall ? "icon-small" : ""} opacity-70 hover:opacity-100 transition-all`}-->
+						<!--/>-->
+						<span>{x.from}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+	</div>
+
+	<div>
+	<span class="text-2xl opacity-30">Más</span>
+		<ul>
+			{
+			ContactOthers.map((x) => (
+				<li class="p-1 m-1">
+					<a
+						class="flex gap-1"
+						href={x.link}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<!--<img-->
+						<!--	src={x.icon}-->
+						<!--	alt={x.alt}-->
+						<!--	class={`${x.iconSmall ? "icon-small" : ""} opacity-70 hover:opacity-100 transition-all`}-->
+						<!--/>-->
+						<span>{x.from}</span>
+					</a>
+				</li>
+			))
+		}
+		</ul>
+	</div>
+
+</div>
 
 <style>
 	ul li img {
-		width: 1.6rem;
+		width: 1.2rem;
 	}
 
 	ul li .icon-small {

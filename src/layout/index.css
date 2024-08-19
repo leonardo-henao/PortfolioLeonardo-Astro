@@ -42,12 +42,13 @@
 }
 
 :root {
-  --cl-black: #0b0b0e;
+  --cl-black: 10, 10, 10;
+  --cl-green1: 101, 200, 177;
+
   --cl-black-02: #030303;
   --cl-red: #f54748;
   --cl-pink: #ef5bc7;
   --cl-white: #fbfbfb;
-  --cl-green1: #65c8b1;
   --cl-blue: #02a2ff;
   --cl-purple: #692663;
   --cl-gray2: #1b1c22c4;
@@ -69,10 +70,9 @@
   letter-spacing: 0.1rem;
 }
 
-body,
-html {
+body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--cl-black);
+  background-color: rgb(var(--cl-black));
   color: var(--cl-font);
   scroll-behavior: smooth;
   padding: 0px;
@@ -86,7 +86,7 @@ article {
 }
 
 .important {
-  color: var(--cl-green1);
+  color: rgb(var(--cl-green1));
 }
 
 .poppins {
@@ -123,7 +123,4 @@ article {
   to {
     transform: translate(calc(-50%));
   }
-}
-
-@@keyframes name {
 }

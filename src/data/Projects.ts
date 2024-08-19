@@ -127,3 +127,33 @@ export const AllAndroidProjects: IPortfolioProject[] = [
     link: "https://iptv-list.vercel.app/",
   },
 ];
+
+export const AllTwitchProjects: IPortfolioProject[] = [
+  {
+    name: "Etech [No-responsive]",
+    image: "/images_apps/templates-from-twitch-1.png",
+    imageBackground: "/images/blob-haikei-pink.svg",
+    description:
+      "Landing page de una empresa de tecnologías. En este proyecto se destaca la re-utilización de componentes, colores, gradientes y código en general haciendo así su proceso de edición mas eficiente. ",
+    toolsUsed: ["Astro", "Tailwind CSS", "React", "TypeScript"],
+    link: "https://templates-from-twitch-1.vercel.app",
+  },
+  {
+    name: "Rhinos GYM [No-responsive]",
+    image: "/images_apps/templates-from-twitch-2.png",
+    imageBackground: "/images/blob-haikei-purple.svg",
+    description:
+      "Landing page de un gimnasio. En este proyecto se destaca el uso de multiples GridLayouts para la correcta organización y visualización de los elementos. ",
+    toolsUsed: ["Astro", "Tailwind CSS", "React", "TypeScript"],
+    link: "https://templates-from-twitch-2.vercel.app",
+  },
+  {
+    name: "KangCokor [No-responsive]",
+    image: "/images_apps/templates-from-twitch-3.png",
+    imageBackground: "/images/blob-haikei-blue.svg",
+    description:
+      "Landing page de una barbería. En este proyecto se destaca el uso de  HTML, CSS y JavaScript (vanilla) para la correcta edición y visualización de los elementos. En este proyecto no se utiliza ningún framework, se crean multiples Sliders infinitos y se hace bastante uso de GridLayouts para un posicionamiento y visualización correcto de los elementos.",
+    toolsUsed: ["HTML", "CSS", "JavaScript"],
+    link: "https://templates-from-twitch-3.vercel.app",
+  },
+];
