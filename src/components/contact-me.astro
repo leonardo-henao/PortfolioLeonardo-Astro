@@ -2,19 +2,20 @@
 import { ContactLinks , ContactOthers} from "../data/ContactLinks";
 ---
 
-<div class="w-full flex flex-row flex-wrap gap-2 justify-evenly">
-
-	<div>
-	<span class="text-2xl opacity-30">Contacto</span>
-	<ul>
+<div class="w-full flex flex-row flex-wrap gap-2 justify-evenly" aria-label="Sección de contacto e información adicional">
+	
+	<div aria-label="Sección de contacto">
+	<span class="text-2xl opacity-30" aria-label="Contacto">Contacto</span>
+	<ul aria-label="Lista de enlaces de contacto">
 		{
 			ContactLinks.map((x) => (
-				<li class="p-1 m-1">
+				<li class="p-1 m-1" aria-label={`Enlace a ${x.from}`}>
 					<a
 						class="flex gap-1"
 						href={x.link}
 						target="_blank"
 						rel="noopener noreferrer"
+						aria-label={`Ir a ${x.from}`}
 					>
 						<!--<img-->
 						<!--	src={x.icon}-->
@@ -29,17 +30,18 @@ import { ContactLinks , ContactOthers} from "../data/ContactLinks";
 	</ul>
 	</div>
 
-	<div>
-	<span class="text-2xl opacity-30">Más</span>
-		<ul>
+	<div aria-label="Sección de información adicional">
+	<span class="text-2xl opacity-30" aria-label="Más información">Más</span>
+		<ul aria-label="Lista de enlaces adicionales">
 			{
 			ContactOthers.map((x) => (
-				<li class="p-1 m-1">
+				<li class="p-1 m-1" aria-label={`Enlace a ${x.from}`}>
 					<a
 						class="flex gap-1"
 						href={x.link}
 						target="_blank"
 						rel="noopener noreferrer"
+						aria-label={`Ir a ${x.from}`}
 					>
 						<!--<img-->
 						<!--	src={x.icon}-->

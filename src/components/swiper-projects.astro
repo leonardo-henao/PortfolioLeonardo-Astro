@@ -2,9 +2,9 @@
 import { type IPortfolioProject } from "../interfaces/IPortfolioProject";
 import CardPortfolioProject from "./card-portfolio-project.astro";
 
-interface Props {
+type Props = {
 	projects: IPortfolioProject[];
-}
+};
 
 const { projects } = Astro.props;
 

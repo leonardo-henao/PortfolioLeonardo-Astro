@@ -4,7 +4,7 @@ import type { IPortfolioProject } from "../interfaces/IPortfolioProject";
 export const AllWebProjects: IPortfolioProject[] = [
   {
     name: "Johana Martinez",
-    image: "/images_apps/fuxionjohanamartinez.jpg",
+    image: "/images_apps/fuxionjohanamartinez.webp",
     imageBackground: "/images/blob-haikei-purple.svg",
     description:
       "Destaca por su diseño atractivo y funcionalidad, en los cuales trabajé exclusivamente. Con un enfoque claro en la captación de clientes, la página refleja profesionalismo y facilita la interacción con los visitantes.",
@@ -20,7 +20,7 @@ export const AllWebProjects: IPortfolioProject[] = [
   },
   {
     name: "Memory cleaner - Website",
-    image: "/images_apps/memorycleaner-website.jpg",
+    image: "/images_apps/memorycleaner-website.webp",
     imageBackground: "/images/blob-haikei-pink.svg",
     description:
       "Atractivo sitio web con tema oscuro y claro, idiomas ingles y español, enfocado en informar sobre funcionalidad de la aplicación y obtener descargas. Sitio web interactivo con animaciones y efectos visuales agradables que mejoran la experiencia de navegación.",
@@ -39,7 +39,7 @@ export const AllWebProjects: IPortfolioProject[] = [
   },
   {
     name: "Macrosss",
-    image: "/images_apps/macrosss.jpg",
+    image: "/images_apps/macrosss.webp",
     imageBackground: "/images/blob-haikei-blue.svg",
     description:
       "Una herramienta que genera automáticamente macros y fórmulas utilizando inteligencia artificial para optimizar el flujo de trabajo en Excel. Sistema de login con Firebase y persistencia en Mysql. ",
@@ -59,7 +59,7 @@ export const AllWebProjects: IPortfolioProject[] = [
   },
   {
     name: "IPTV Listas M3U Website",
-    image: "/images_apps/iptv_lists_website.jpg",
+    image: "/images_apps/iptv_lists_website.webp",
     imageBackground: "/images/blob-haikei.svg",
     description:
       "Sitio web del proyecto IPTV Listas M3U que refleja la innovación y la utilidad de nuestra aplicación, diseñado para mejorar su experiencia y facilitar su acceso a esta herramienta.",
@@ -78,7 +78,7 @@ export const AllWebProjects: IPortfolioProject[] = [
 export const AllAndroidProjects: IPortfolioProject[] = [
   {
     name: "Passion Nails",
-    image: "/images_apps/passionnails-android.jpg",
+    image: "/images_apps/passionnails-android.webp",
     imageBackground: "/images/blob-haikei.svg",
     description:
       "Aplicación Android desarrollada con Kotlin que integra la API de Facebook para mostrar una galería de imágenes de uñas personalizadas. Presenta una interfaz de usuario intuitiva donde los usuarios pueden navegar, guardar y compartir imágenes para inspirarse en el arte de las uñas.",
@@ -94,7 +94,7 @@ export const AllAndroidProjects: IPortfolioProject[] = [
   },
   {
     name: "Wallpplus",
-    image: "/images_apps/wallpplus-android.jpg",
+    image: "/images_apps/wallpplus-android.webp",
     imageBackground: "/images/blob-haikei-pink.svg",
     description:
       "Mas de 3000 fondos de pantalla en alta resolución, descarga y configura fácilmente los fondos en el dispositivo. Desarrollada en Kotlin, implementa mecanismos para optimizar el cache y mejorar la carga y visualización de las imágenes.",
@@ -103,7 +103,7 @@ export const AllAndroidProjects: IPortfolioProject[] = [
   },
   {
     name: "Limpiador de Memoria",
-    image: "/images_apps/memory_cleaner.jpg",
+    image: "/images_apps/memory_cleaner.webp",
     imageBackground: "/images/blob-haikei-pink.svg",
     description:
       "Una solución eficiente y potente para optimizar el rendimiento de tu dispositivo Android. Desarrollada con Kotlin, esta aplicación se basa en una exhaustiva investigación sobre las carpetas residuales generadas por diversas aplicaciones.",
@@ -112,7 +112,7 @@ export const AllAndroidProjects: IPortfolioProject[] = [
   },
   {
     name: "IPTV Listas M3U",
-    image: "/images_apps/iptv_lists_android.jpg",
+    image: "/images_apps/iptv_lists_android.webp",
     imageBackground: "/images/blob-haikei.svg",
     description:
       "Aplicación para Android donde los usuarios comparten listas de IPTV, el sistema funciona con un registro de cada usuario, limitaciones por tipos de usuario, cada usuario tiene un perfil publico al cual otros usuarios pueden acceder y ver el contenido compartido por el. Sistema de notificaciones push, diseñada con la librería Material Design. Backend creado en Python con Django.",
@@ -131,7 +131,7 @@ export const AllAndroidProjects: IPortfolioProject[] = [
 export const AllTwitchProjects: IPortfolioProject[] = [
   {
     name: "Etech [No-responsive]",
-    image: "/images_apps/templates-from-twitch-1.png",
+    image: "/images_apps/templates-from-twitch-1.webp",
     imageBackground: "/images/blob-haikei-pink.svg",
     description:
       "Landing page de una empresa de tecnologías. En este proyecto se destaca la re-utilización de componentes, colores, gradientes y código en general haciendo así su proceso de edición mas eficiente. ",
@@ -140,7 +140,7 @@ export const AllTwitchProjects: IPortfolioProject[] = [
   },
   {
     name: "Rhinos GYM [No-responsive]",
-    image: "/images_apps/templates-from-twitch-2.png",
+    image: "/images_apps/templates-from-twitch-2.webp",
     imageBackground: "/images/blob-haikei-purple.svg",
     description:
       "Landing page de un gimnasio. En este proyecto se destaca el uso de multiples GridLayouts para la correcta organización y visualización de los elementos. ",
@@ -149,7 +149,7 @@ export const AllTwitchProjects: IPortfolioProject[] = [
   },
   {
     name: "KangCokor [No-responsive]",
-    image: "/images_apps/templates-from-twitch-3.png",
+    image: "/images_apps/templates-from-twitch-3.webp",
     imageBackground: "/images/blob-haikei-blue.svg",
     description:
       "Landing page de una barbería. En este proyecto se destaca el uso de  HTML, CSS y JavaScript (vanilla) para la correcta edición y visualización de los elementos. En este proyecto no se utiliza ningún framework, se crean multiples Sliders infinitos y se hace bastante uso de GridLayouts para un posicionamiento y visualización correcto de los elementos.",

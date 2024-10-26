@@ -10,59 +10,84 @@ const anim = {
 ---
 
 <nav
+	aria-label="Menú"
 	class="w-full flex justify-evenly items-center kanit sticky top-0 bg-black_primary z-40 text-white"
 >
-	<div class="text-3xl p-4 w-[70%] md:w-[55%] lg:w-[60%]">
+	<div
+		class="text-3xl p-4 w-[70%] md:w-[55%] lg:w-[60%]"
+		aria-label="Nombre de la marca Leonardo Henao"
+	>
 		<a href="/">Leonardo H.</a>
 	</div>
-	<div
+
+	<button
+		aria-label="Botón de abrir o cerrar menu"
 		onclick="controlMenu()"
 		class="w-12 h-12 p-2 cursor-pointer md:hidden ml-auto text-3xl"
+		><CgMenuRightAlt /></button
 	>
-		<CgMenuRightAlt />
-	</div>
-	<div>
-		<ul class="md:gap-4 md:p-4 hidden md:flex max-md:menu_mobile" id="menu">
-			<motion.li
-				client:visible
-				{...anim}
-				transition={{ delay: 0.1 }}
-				className="li_nav"
-			>
-				<a href="#" onclick="goToTop()">Inicio</a>
-			</motion.li>
-			<motion.li
-				client:visible
-				{...anim}
-				transition={{ delay: 0.2 }}
-				className="li_nav"
-			>
-				<a href="#about_me" onclick="controlMenu()">Sobre mi</a>
-			</motion.li>
-			<motion.li
-				client:visible
-				{...anim}
-				transition={{ delay: 0.3 }}
-				className="li_nav"
-			>
-				<a href="#services" onclick="controlMenu()">Servicios</a>
-			</motion.li>
-			<motion.li
-				client:visible
-				{...anim}
-				transition={{ delay: 0.4 }}
-				className="li_nav"
-			>
-				<a href="#portfolio" onclick="controlMenu()">Portafolio</a>
-			</motion.li>
-			<li
-				class="cursor-pointer mt-8 text-2xl md:hidden"
+
+	<ul
+		class="md:gap-4 md:p-4 hidden md:flex max-md:menu_mobile"
+		id="menu"
+		aria-label="Menu de navegación"
+	>
+		<motion.li
+			client:visible
+			{...anim}
+			transition={{ delay: 0.1 }}
+			className="li_nav"
+			aria-label="Inicio"
+		>
+			<a href="#" onclick="goToTop()" aria-label="Ir al inicio">Inicio</a>
+		</motion.li>
+		<motion.li
+			client:visible
+			{...anim}
+			transition={{ delay: 0.2 }}
+			className="li_nav"
+			aria-label="Sobre mi"
+		>
+			<a
+				href="#about_me"
 				onclick="controlMenu()"
+				aria-label="Ir a sección Sobre mi">Sobre mi</a
 			>
-				<MdClose />
-			</li>
-		</ul>
-	</div>
+		</motion.li>
+		<motion.li
+			client:visible
+			{...anim}
+			transition={{ delay: 0.3 }}
+			className="li_nav"
+			aria-label="Servicios"
+		>
+			<a
+				href="#services"
+				onclick="controlMenu()"
+				aria-label="Ir a sección Servicios">Servicios</a
+			>
+		</motion.li>
+		<motion.li
+			client:visible
+			{...anim}
+			transition={{ delay: 0.4 }}
+			className="li_nav"
+			aria-label="Portafolio"
+		>
+			<a
+				href="#portfolio"
+				onclick="controlMenu()"
+				aria-label="Ir a sección Portafolio">Portafolio</a
+			>
+		</motion.li>
+		<li
+			aria-label="Botón cerrar menu"
+			class="cursor-pointer mt-8 text-2xl md:hidden"
+			onclick="controlMenu()"
+		>
+			<MdClose />
+		</li>
+	</ul>
 </nav>
 
 <script is:inline>

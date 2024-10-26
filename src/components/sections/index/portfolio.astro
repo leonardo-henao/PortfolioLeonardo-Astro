@@ -9,7 +9,7 @@ import SwiperProjects from "../../swiper-projects.astro";
 import TitleSection from "../../title-section.astro";
 ---
 
-<article id="portfolio">
+<article id="portfolio" aria-label="Sección de portafolio">
 	<TitleSection title="Portafolio" />
 	<div class="mx-auto">
 		<motion.h3
@@ -17,6 +17,7 @@ import TitleSection from "../../title-section.astro";
 			whileInView={{ opacity: 1 }}
 			client:visible
 			className="opacity-40 text-lg my-4 mx-auto pl-4 max-w-7xl"
+			aria-label="Lista de sitios web y aplicaciones web"
 			>Sitios y Aplicaciones WEB</motion.h3
 		>
 		<div>
@@ -28,7 +29,7 @@ import TitleSection from "../../title-section.astro";
 			whileInView={{ opacity: 1 }}
 			client:visible
 			className="opacity-40 text-lg mt-8 mb-4 mx-auto pl-4 max-w-7xl"
-			>Aplicaciones Android</motion.h3
+			aria-label="Lista de aplicaciones Android">Aplicaciones Android</motion.h3
 		>
 		<div>
 			<SwiperProjects projects={AllAndroidProjects} />
@@ -39,11 +40,12 @@ import TitleSection from "../../title-section.astro";
 			whileInView={{ opacity: 1 }}
 			client:visible
 			className="opacity-40 text-lg mt-8 mb-4 mx-auto pl-4 max-w-7xl"
+			aria-label="Lista de proyectos creados en vivo"
 		>
 			On-Air Projects
-			<p class="opacity-40">
+			<p class="opacity-40" aria-label="Descripción de los proyectos en vivo">
 				Projectos creados en vivo en mi canal de Twitch
-				<span class="block text-sm">
+				<span class="block text-sm" aria-label="Información adicional">
 					[Los projectos no se han adaptado a multiples pantallas]
 				</span>
 			</p>

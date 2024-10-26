@@ -10,7 +10,7 @@ const { project } = Astro.props;
 const { name, image, imageBackground, description, toolsUsed, link } = project;
 ---
 
-<swiper-slide class="portfolio_item">
+<swiper-slide class="portfolio_item" aria-label={`Proyecto: ${name}`}>
 	<img
 		loading="lazy"
 		class="portfolio_item-background"
@@ -18,15 +18,21 @@ const { name, image, imageBackground, description, toolsUsed, link } = project;
 		alt={`Imagen de fondo de decoración para la aplicación ${name}`}
 	/>
 
-	<div class="portfolio_item-content">
-		<span class="portfolio_item-content-title text-2xl lg:text-4xl">{name}</span
+	<div class="portfolio_item-content" aria-label="Información del proyecto">
+		<span
+			class="portfolio_item-content-title text-2xl lg:text-4xl"
+			aria-label={name}
 		>
+			{name}
+		</span>
 
 		<div
 			class="flex flex-nowrap flex-col md:flex-row items-center justify-center"
+			aria-label="Imagen y descripción del proyecto"
 		>
 			<figure
 				class="w-[60%] h-[250px] lg:h-[300px] lg:w-[35%] flex justify-center"
+				aria-label={`Imagen del proyecto ${name}`}
 			>
 				<img
 					loading="lazy"
@@ -36,6 +42,7 @@ const { name, image, imageBackground, description, toolsUsed, link } = project;
 			</figure>
 			<div
 				class="portfolio_item-content-data no-scrollbar w-[80%] lg:w-[70%] h-[240px] lg:h-[260px] flex items-center justify-center overflow-y-auto m-4 px-4"
+				aria-label={`Descripción del proyecto ${name}`}
 			>
 				<motion.p
 					client:visible
@@ -47,7 +54,10 @@ const { name, image, imageBackground, description, toolsUsed, link } = project;
 				>
 			</div>
 		</div>
-		<ul class="portfolio_item-content-data-skills">
+		<ul
+			class="portfolio_item-content-data-skills"
+			aria-label={`Tecnologías utilizadas en ${name}`}
+		>
 			{
 				toolsUsed.map((x) => (
 					<motion.li
@@ -61,7 +71,12 @@ const { name, image, imageBackground, description, toolsUsed, link } = project;
 				))
 			}
 		</ul>
-		<a class="portfolio_item-content-button" href={link} target="_blank">
+		<a
+			class="portfolio_item-content-button"
+			href={link}
+			target="_blank"
+			aria-label={`Enlace al proyecto ${name}`}
+		>
 			Visitar
 		</a>
 	</div>

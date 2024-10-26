@@ -4,7 +4,7 @@ import ProgrammingLanguages from "../../ProgrammingLanguages";
 import TitleSection from "../../title-section.astro";
 ---
 
-<article id="about_me">
+<article id="about_me" aria-label="Sección sobre el usuario">
 	<TitleSection title="Sobre mi" />
 	<div class="content-aboutme">
 		<div class="grid grid-cols-1 sm:grid-cols-5 items-center justify-center">
@@ -14,15 +14,16 @@ import TitleSection from "../../title-section.astro";
 				whileInView={{ opacity: 1 }}
 				transition={{ delay: 0.2 }}
 				className="m-auto w-full sm:block sm:col-span-2"
+				aria-label="Imagen de perfil del usuario"
 			>
 				<img
 					class="img_photo"
 					loading="lazy"
-					src="/assets/photo__.jpg"
+					src="/assets/photo__.webp"
 					alt="Foto de Leonardo Henao"
 				/>
 			</motion.div>
-			<div class="sm:col-span-3 p-2">
+			<div class="sm:col-span-3 p-2" aria-label="Descripción del usuario">
 				<p>
 					Con más de 5 años de experiencia destacada en la creación y
 					optimización de aplicaciones y páginas web. Mi especialización se
@@ -55,7 +56,7 @@ import TitleSection from "../../title-section.astro";
 				</p>
 			</div>
 		</div>
-		<div class="p-6 text-lg">
+		<div class="p-6 text-lg" aria-label="Llamada a la acción del usuario">
 			Estoy convencido de que mi experiencia y enfoque especializado pueden
 			aportar significativamente al éxito y la innovación de su empresa. Estoy
 			emocionado por la oportunidad de discutir cómo mis habilidades pueden
@@ -64,22 +65,23 @@ import TitleSection from "../../title-section.astro";
 		</div>
 	</div>
 	<ProgrammingLanguages client:visible />
-	<style>
-		p {
-			margin: 0.5rem 0;
-			padding: 4px;
-		}
-
-		.content-aboutme {
-			background-color: var(--cl-black-02);
-			border-radius: 1rem;
-		}
-
-		.content-aboutme .img_photo {
-			border-radius: 1rem 0 0 1rem;
-			max-width: 310px;
-			margin: 0.5rem auto;
-			mix-blend-mode: difference;
-		}
-	</style>
 </article>
+
+<style>
+	p {
+		margin: 0.5rem 0;
+		padding: 4px;
+	}
+
+	.content-aboutme {
+		background-color: var(--cl-black-02);
+		border-radius: 1rem;
+	}
+
+	.content-aboutme .img_photo {
+		border-radius: 1rem 0 0 1rem;
+		max-width: 310px;
+		margin: 0.5rem auto;
+		mix-blend-mode: difference;
+	}
+</style>

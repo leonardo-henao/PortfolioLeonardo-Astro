@@ -1,31 +1,42 @@
 ---
-import { FaTwitch } from "react-icons/fa";
+import { FaGithub, FaTwitch, FaInstagram } from "react-icons/fa";
 import { TbWorldCheck } from "react-icons/tb";
-import { FaGithub } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
-import { FaInstagram } from "react-icons/fa";
 import Layout from "../layout/Layout.astro";
 ---
 
 <Layout>
-	<main class="py-8 px-4 max-w-lg mx-auto">
+	<main
+		class="py-8 px-4 max-w-lg mx-auto"
+		aria-label="Sección de redes sociales"
+	>
 		<img
 			class="size-44 object-cover rounded-[50%] mx-auto"
 			src="/assets/photo__.jpg"
 			alt="Leo's photo"
 		/>
-		<h1 class="text-3xl text-center my-4">Leonardo Henao</h1>
-		<h2 class="my-4 opacity-80 text-center">
+		<h1 class="text-3xl text-center my-4" aria-label="Nombre del usuario">
+			Leonardo Henao
+		</h1>
+		<h2 class="my-4 opacity-80 text-center" aria-label="Mensaje de bienvenida">
 			Hi, i'm Leonardo Henao. Thank for you visiting.
 			<br />
 			You have here a list of my social networks.
 		</h2>
 
-		<div>
-			<h3 class="opacity-50 text-lg">Content creative</h3>
-			<ul class="list-content flex flex-col gap-2">
-				<li>
+		<div aria-label="Sección de redes sociales de contenido creativo">
+			<h3
+				class="opacity-50 text-lg"
+				aria-label="Redes sociales de contenido creativo"
+			>
+				Content creative
+			</h3>
+			<ul
+				class="list-content flex flex-col gap-2"
+				aria-label="Lista de redes sociales de contenido creativo"
+			>
+				<li aria-label="Enlace a Twitch">
 					<a
 						href="http://twitch.com/lhenaoll"
 						target="_blank"
@@ -35,7 +46,7 @@ import Layout from "../layout/Layout.astro";
 						Twitch
 					</a>
 				</li>
-				<li>
+				<li aria-label="Enlace a Youtube">
 					<a
 						href="https://www.youtube.com/@lhenaoll"
 						target="_blank"
@@ -47,10 +58,15 @@ import Layout from "../layout/Layout.astro";
 				</li>
 			</ul>
 		</div>
-		<div>
-			<h3 class="opacity-50 text-lg mt-4">Social networks</h3>
-			<ul class="list-content flex flex-col gap-2">
-				<li>
+		<div aria-label="Sección de redes sociales">
+			<h3 class="opacity-50 text-lg mt-4" aria-label="Redes sociales">
+				Social networks
+			</h3>
+			<ul
+				class="list-content flex flex-col gap-2"
+				aria-label="Lista de redes sociales"
+			>
+				<li aria-label="Enlace a Instagram (lhenaoll)">
 					<a
 						href="http://instagram.com/lhenaoll"
 						target="_blank"
@@ -60,7 +76,7 @@ import Layout from "../layout/Layout.astro";
 						Instagram (lhenaoll)
 					</a>
 				</li>
-				<li>
+				<li aria-label="Enlace a Instagram (program_ando)">
 					<a
 						href="https://www.instagram.com/program_ando/"
 						target="_blank"
@@ -72,10 +88,15 @@ import Layout from "../layout/Layout.astro";
 				</li>
 			</ul>
 		</div>
-		<div>
-			<h3 class="opacity-50 text-lg mt-4">Other networks</h3>
-			<ul class="list-content flex flex-col gap-2">
-				<li>
+		<div aria-label="Sección de otras redes">
+			<h3 class="opacity-50 text-lg mt-4" aria-label="Otras redes">
+				Other networks
+			</h3>
+			<ul
+				class="list-content flex flex-col gap-2"
+				aria-label="Lista de otras redes"
+			>
+				<li aria-label="Enlace a Play Store">
 					<a
 						href="https://play.google.com/store/apps/dev?id=7404460400144886326"
 						target="_blank"
@@ -85,7 +106,7 @@ import Layout from "../layout/Layout.astro";
 						Play Store
 					</a>
 				</li>
-				<li>
+				<li aria-label="Enlace a Website">
 					<a
 						href="https://www.leonardohenao.com"
 						target="_blank"
@@ -95,7 +116,7 @@ import Layout from "../layout/Layout.astro";
 						Website
 					</a>
 				</li>
-				<li>
+				<li aria-label="Enlace a Github">
 					<a
 						href="https://github.com/leonardo-henao"
 						target="_blank"
@@ -109,6 +130,7 @@ import Layout from "../layout/Layout.astro";
 		</div>
 	</main>
 </Layout>
+
 <style>
 	.list-content {
 		background-color: #18181fa6;

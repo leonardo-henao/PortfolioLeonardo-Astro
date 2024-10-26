@@ -1,11 +1,11 @@
 ---
-import ContactMe from "../../contact-me.astro";
 import TextTyped from "../../TextTyped";
 ---
 
 <section
 	id="home"
 	class="flex flex-col justify-center items-center h-dvh mx-auto relative w-full"
+	aria-label="Sección principal de la página de inicio"
 >
 	<video
 		autoplay
@@ -13,26 +13,35 @@ import TextTyped from "../../TextTyped";
 		muted
 		playsinline
 		class="absolute top-0 left-0 bottom-0 object-cover w-full h-full"
+		aria-label="Video de fondo con un ciclo infinito de reproducción automática"
 	>
 		<source src="/videos/vid-01.mp4" type="video/mp4" />
 		<source src="/videos/vid-01.webm" type="video/webm" />
 	</video>
-	<div class="section_welcome"></div>
-	<div class="z-20 -mt-8 flex flex-col items-center">
+	<div class="section_welcome" aria-hidden="true"></div>
+	<div
+		class="z-20 -mt-8 flex flex-col items-center"
+		aria-label="Información principal del usuario"
+	>
 		<h1
 			class="kanit text-5xl md:text-7xl mb-2 text-center flex flex-wrap gap-4 justify-center"
+			aria-label="Nombre y profesión del usuario"
+			aria-live="polite"
 		>
 			Desarrollador <TextTyped client:visible />
 		</h1>
-		<h2 class="text-base md:text-lg w-3/5 opacity-80">
+		<h2
+			class="text-base md:text-lg w-3/5 opacity-80"
+			aria-label="Breve descripción del usuario"
+		>
 			¡Hola! Soy Leonardo Henao, un desarrollador de software de Cali -
 			Colombia, enfocado en el frontend aunque con bastantes conocimientos en el
 			backend. Apasionado por aportar y aprender lo máximo posible en todos los
 			proyectos que participo.
 		</h2>
-		<div class="my-2">
-			<!--<ContactMe />-->
-		</div>
+		<!--<div class="my-2" aria-label="Sección de contacto">-->
+		<!--<ContactMe />-->
+		<!--</div>-->
 	</div>
 </section>
 

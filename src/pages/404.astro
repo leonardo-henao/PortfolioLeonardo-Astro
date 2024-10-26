@@ -6,14 +6,20 @@ import LottieAnimation from "../components/LottieAnimation";
 <Layout title="Página no encontrada">
 	<article
 		class="flex flex-col gap-4 h-screen w-screen justify-center items-center"
+		aria-label="Página de error 404"
 	>
-		<div class="w-72 bg-white rounded-[50%]">
+		<div class="w-72 bg-white rounded-[50%]" aria-label="Animación de error">
 			<LottieAnimation client:only />
 		</div>
-		<div>Oh! No encontramos lo que buscabas...</div>
-		<div>
+		<div aria-label="Mensaje de error">
+			Oh! No encontramos lo que buscabas...
+		</div>
+		<div aria-label="Sugerencia para volver al inicio">
 			<p>
-				Tal vez te pueda interesar ir al <a class="important" href="/">inicio</a
+				Tal vez te pueda interesar ir al <a
+					class="important"
+					href="/"
+					aria-label="Enlace a la página de inicio">inicio</a
 				>
 			</p>
 		</div>
