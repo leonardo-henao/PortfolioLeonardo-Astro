@@ -1,33 +1,32 @@
 ---
 import { motion } from "framer-motion";
 import { MyServices } from "../../../data/Services";
+import SetReactIcon from "../../../components/SetReactIcon.tsx";
 import TitleSection from "../../title-section.astro";
 ---
 
 <article id="services" aria-label="Sección de servicios">
 	<TitleSection title="Servicios" />
 	<div
-		class="services-container grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-4"
+		class="services_container grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-6"
 		aria-label="Lista de servicios ofrecidos"
 	>
 		{
 			MyServices.map((x) => (
 				<motion.div
 					client:visible
-					layout
-					initial={{
-						backgroundImage: `linear-gradient(to bottom, transparent, ${x.color} )`,
-					}}
-					whileInView={{ backgroundColor: x.color }}
-					whileHover={{ boxShadow: `0 0 5px ${x.color}` }}
-					transition={{ delay: 0.2 }}
-					className="cursor-pointer"
+					whileHover={{ scale: 1.02 }}
 					aria-label={`Servicio: ${x.title}`}
+					style={{ boxShadow: `6px 6px 0px ${x.color}` }}
+					className="services_container-service cursor-pointer border-2 bg-black_primary"
 				>
-					<img class="icon_service" src={x.icon} alt={x.alt} />
-					<h2 class="title_service" aria-label={x.title}>
-						{x.title}
-					</h2>
+					<div class="flex items-center gap-3">
+						<SetReactIcon iconName={x.icon} color={x.color} client:visible />
+
+						<h2 class="title_service" aria-label={x.title}>
+							{x.title}
+						</h2>
+					</div>
 
 					<motion.p
 						client:visible
@@ -46,28 +45,15 @@ import TitleSection from "../../title-section.astro";
 </article>
 
 <style>
-	.services-container div {
+	.services_container-service {
 		padding: 10px 20px;
 		border-radius: 10px;
 		position: relative;
 	}
 
-	.icon_service {
-		width: 80px;
-		margin: 15px 0;
-	}
-
 	.title_service {
 		font-size: 1.5rem;
 		font-weight: bold;
-	}
-
-	.temp_service {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.11;
+		z-index: 10 !important;
 	}
 </style>

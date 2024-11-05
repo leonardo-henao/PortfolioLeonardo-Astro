@@ -1,16 +1,39 @@
 import type { IPortfolioProject } from "../interfaces/IPortfolioProject";
 
+const defaultRol = "Diseño y Desarrollo completo";
+
 // Aplicaciones web
 export const AllWebProjects: IPortfolioProject[] = [
   {
-    name: "Johana Martinez",
-    image: "/images_apps/fuxionjohanamartinez.webp",
-    imageBackground: "/images/blob-haikei-purple.svg",
-    description:
-      "Destaca por su diseño atractivo y funcionalidad, en los cuales trabajé exclusivamente. Con un enfoque claro en la captación de clientes, la página refleja profesionalismo y facilita la interacción con los visitantes.",
+    name: "Creaciones Fabi",
+    rol: defaultRol,
+    image: "/images_apps/creacionesfabi.webp",
+    imageBackground: "/images/blob-haikei-blue.svg",
+    description: `
+		<strong>Desafios: </strong> Lograr colocar mas de 40 imágenes optimizando la carga del sitio web. <br/> 
+		<strong>Soluciones: </strong> Utilizar imágenes de ultima tecnología (<i>.webp</i>) y realizar un lazy loading de las imágenes que no se visualizan para mejorar la carga del sitio web.`,
     toolsUsed: [
       "Astro",
-      "React components",
+      "React",
+      "Tailwind CSS",
+      "CSS",
+      "Vercel",
+      "TypeScript",
+      "Framer Motion",
+    ],
+    link: "https://creacionesfabi.com",
+  },
+  {
+    name: "Johana Martinez",
+    rol: defaultRol,
+    image: "/images_apps/fuxionjohanamartinez.webp",
+    imageBackground: "/images/blob-haikei-purple.svg",
+    description: `
+		<strong>Propósito: </strong> Captación de clientes y destacar los principales productos. <br/>
+		<strong>Solución: </strong> Reflejar profesionalismo y facilitar la interacción de los visitantes con los principales productos.`,
+    toolsUsed: [
+      "Astro",
+      "React",
       "CSS",
       "Javascript",
       "Tailwind CSS",
@@ -20,18 +43,20 @@ export const AllWebProjects: IPortfolioProject[] = [
   },
   {
     name: "Memory cleaner - Website",
+    rol: defaultRol,
     image: "/images_apps/memorycleaner-website.webp",
     imageBackground: "/images/blob-haikei-pink.svg",
-    description:
-      "Atractivo sitio web con tema oscuro y claro, idiomas ingles y español, enfocado en informar sobre funcionalidad de la aplicación y obtener descargas. Sitio web interactivo con animaciones y efectos visuales agradables que mejoran la experiencia de navegación.",
+    description: `
+		<strong>Desafió: </strong> Lograr captar usuarios de multiples idiomas y plasmar las principales funcionalidades de la aplicación. <br />
+		<strong>Solución: </strong> Crear sitio web en multiples idiomas para mejorar la experiencia de cada usuario y reflejar las funcionalidades principales de la aplicación.`,
     toolsUsed: [
       "Astro",
       "Typescript",
-      "Javascript",
+      "JavaScript",
+      "Tailwind CSS",
       "CSS",
       "Framer motion",
-      "React components",
-      "Tailwind CSS",
+      "React",
       "Vercel",
       "Lottie",
     ],
@@ -39,6 +64,7 @@ export const AllWebProjects: IPortfolioProject[] = [
   },
   {
     name: "Macrosss",
+    rol: defaultRol,
     image: "/images_apps/macrosss.webp",
     imageBackground: "/images/blob-haikei-blue.svg",
     description:
@@ -59,6 +85,7 @@ export const AllWebProjects: IPortfolioProject[] = [
   },
   {
     name: "IPTV Listas M3U Website",
+    rol: defaultRol,
     image: "/images_apps/iptv_lists_website.webp",
     imageBackground: "/images/blob-haikei.svg",
     description:
@@ -78,6 +105,7 @@ export const AllWebProjects: IPortfolioProject[] = [
 export const AllAndroidProjects: IPortfolioProject[] = [
   {
     name: "Passion Nails",
+    rol: defaultRol,
     image: "/images_apps/passionnails-android.webp",
     imageBackground: "/images/blob-haikei.svg",
     description:
@@ -94,6 +122,7 @@ export const AllAndroidProjects: IPortfolioProject[] = [
   },
   {
     name: "Wallpplus",
+    rol: defaultRol,
     image: "/images_apps/wallpplus-android.webp",
     imageBackground: "/images/blob-haikei-pink.svg",
     description:
@@ -103,6 +132,7 @@ export const AllAndroidProjects: IPortfolioProject[] = [
   },
   {
     name: "Limpiador de Memoria",
+    rol: defaultRol,
     image: "/images_apps/memory_cleaner.webp",
     imageBackground: "/images/blob-haikei-pink.svg",
     description:
@@ -112,6 +142,7 @@ export const AllAndroidProjects: IPortfolioProject[] = [
   },
   {
     name: "IPTV Listas M3U",
+    rol: defaultRol,
     image: "/images_apps/iptv_lists_android.webp",
     imageBackground: "/images/blob-haikei.svg",
     description:
@@ -131,6 +162,7 @@ export const AllAndroidProjects: IPortfolioProject[] = [
 export const AllTwitchProjects: IPortfolioProject[] = [
   {
     name: "Etech [No-responsive]",
+    rol: `Streamer y desarrollador completo`,
     image: "/images_apps/templates-from-twitch-1.webp",
     imageBackground: "/images/blob-haikei-pink.svg",
     description:
@@ -140,6 +172,7 @@ export const AllTwitchProjects: IPortfolioProject[] = [
   },
   {
     name: "Rhinos GYM [No-responsive]",
+    rol: `Streamer y desarrollador completo`,
     image: "/images_apps/templates-from-twitch-2.webp",
     imageBackground: "/images/blob-haikei-purple.svg",
     description:
@@ -149,6 +182,7 @@ export const AllTwitchProjects: IPortfolioProject[] = [
   },
   {
     name: "KangCokor [No-responsive]",
+    rol: `Streamer y desarrollador completo`,
     image: "/images_apps/templates-from-twitch-3.webp",
     imageBackground: "/images/blob-haikei-blue.svg",
     description:

@@ -2,15 +2,15 @@ import type { IServices } from "../interfaces/IServices";
 
 export const MyServices: IServices[] = [
   {
-    icon: "/icons/smartphone-svgrepo.svg",
+    icon: "MdOutlineDeveloperMode",
     alt: "Icono Desarrollo aplicaciones móviles para Android",
-    title: "Desarrollo aplicaciones móviles para Android",
+    title: "Desarrollo aplicaciones para Android",
     description:
       "Utilizando mi experiencia en el desarrollo de aplicaciones para Android, puedo crear soluciones personalizadas y atractivas para satisfacer las necesidades específicas de tus usuarios.",
     color: "var(--cl-purple)",
   },
   {
-    icon: "/icons/web-page-svgrepo.svg",
+    icon: "CgWebsite",
     alt: "Icono Desarrollo aplicaciones y páginas web",
     title: "Desarrollo aplicaciones y páginas web",
     description:
@@ -18,7 +18,7 @@ export const MyServices: IServices[] = [
     color: "var(--cl-red)",
   },
   {
-    icon: "/icons/ranking-svgrepo.svg",
+    icon: "GrOptimize",
     alt: "Icon Optimización y mejora de rendimiento",
     title: "Optimización y mejora de rendimiento",
     description:
@@ -26,7 +26,7 @@ export const MyServices: IServices[] = [
     color: "var(--cl-pink)",
   },
   {
-    icon: "/icons/support-svgrepo.svg",
+    icon: "GrHostMaintenance",
     alt: "Icon Mantenimiento y soporte técnico",
     title: "Mantenimiento y soporte técnico",
     description:
